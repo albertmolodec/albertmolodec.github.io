@@ -33,6 +33,9 @@ class Bio extends React.Component {
             You should follow him on Twitter
           </a>
         </p>
+        <p>
+          Edited by Albert Abdulamov
+        </p>
       </div>
     )
   }
