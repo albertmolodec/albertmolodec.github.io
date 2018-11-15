@@ -1,11 +1,18 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# Мой сайт: albertmolodec.github.io.
+Код, тексты, проекты... Вот это вот всё.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+## Что внутри
+1. Gatsby
+2. React
+3. PostCSS
+4. ESLint, Prettier, stylelint
+5. RSS
+6. И другие фичи
 
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+***
 
-Or [view the live demo here](https://gatsby-starter-blog-demo.netlify.com/).
+Использовал [Starter Gatsby Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 
-## Running in development
-`gatsby develop`
+***
+
+Напишу остальное как только, так сразу

@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'AlbertMolodec website',
+    author: 'Albert Abdulmanov',
+    description: 'My personal page',
+    siteUrl: 'https://github.com/albertmolodec/albertmolodec.github.io/',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/albertmolodec-website',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -39,17 +39,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-yandex-metrika`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: '51163475',
+        webvisor: false,
+        trackHash: true,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `AlbertMolodec website`,
+        short_name: `AlbertMolodec`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
