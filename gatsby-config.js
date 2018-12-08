@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'AlbertMolodec website',
-    author: 'Albert Abdulmanov',
-    description: 'My personal page',
+    title: 'AlbertMolodec',
+    author: 'Альберт Абдульманов',
+    description: 'Пишу код и тексты',
     siteUrl: 'https://github.com/albertmolodec/albertmolodec.github.io/',
   },
   pathPrefix: '/albertmolodec-website',
@@ -22,6 +22,9 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              resize: {
+                quality: 90,
+              }
             },
           },
           {
@@ -37,7 +40,13 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-yandex-metrika`,
       options: {
