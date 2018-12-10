@@ -7,7 +7,7 @@
 3. PostCSS
 4. ESLint, Prettier, stylelint
 5. RSS
-6. И другие фичи
+6. И другие инструменты
 
 ***
 
