@@ -20,7 +20,6 @@
     "gatsby-source-filesystem": "^2.0.2",
     "gatsby-transformer-remark": "^2.1.6",
     "gatsby-transformer-sharp": "^2.1.3",
-    "lodash": "^4.17.11",
     "prismjs": "^1.15.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
@@ -55,6 +54,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
+    "serve": "gatsby serve -p 9000 -o",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
     "push-source": "git checkout source && git push origin source"
