@@ -24,7 +24,7 @@ module.exports = {
               maxWidth: 590,
               resize: {
                 quality: 90,
-              }
+              },
             },
           },
           {

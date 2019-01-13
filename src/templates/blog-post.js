@@ -7,6 +7,27 @@ import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
 class BlogPostTemplate extends React.Component {
+  // Add Codepen snippets
+  componentDidMount() {
+    const codepen = document.getElementsByClassName('codepen')
+    if (codepen.length > 0) {
+      if (!document.getElementById('codepen-script') || !this.state.codepen) {
+        const s = document.createElement('script')
+        s.async = s.defer = true
+        s.src = `//static.codepen.io/assets/embed/ei.js`
+        s.id = 'codepen-script'
+        const body = document.body
+        if (body) {
+          body.appendChild(s)
+        }
+
+        this.setState({
+          codepen: true,
+        })
+      }
+    }
+  }
+
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
