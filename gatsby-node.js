@@ -33,10 +33,15 @@ exports.createPages = ({ graphql, actions }) => {
     // Create blog posts pages.
     const posts = result.data.allMarkdownRemark.edges;
 
+    console.log('posts:\n');
+    console.log(posts);
+
     posts.forEach((post, index) => {
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
+
+      console.log(`slug: ${post.node.field.slug}`);
 
       createPage({
         path: post.node.fields.slug,

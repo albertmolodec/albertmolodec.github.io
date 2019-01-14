@@ -36,11 +36,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Helmet
-          htmlAttributes={{ lang: 'ru' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
-        />
+        
         <h1>{post.frontmatter.title}</h1>
         <p>
           {post.frontmatter.date}

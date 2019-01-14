@@ -1,65 +1,29 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
     const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const siteDescription = data.site.siteMetadata.description;
-    const posts = data.allMarkdownRemark.edges;
+    console.log(data);
+    // const siteTitle = data.site.siteMetadata.title;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Helmet
-          htmlAttributes={{ lang: 'ru' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
-        />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
-        })}
+      // TO DO: <Layout location={this.props.location} title={siteTitle}>
+      <Layout>
+        <p style={{ textAlign: 'center' }}>Сайт в разработке.</p>
+        <ul>
+          <li><Link to='/projects'>Проекты</Link></li>
+          <li><Link to='/blog'>Блог</Link></li>
+          <li><Link to='/travel'>Путешествия</Link></li>
+          <li><Link to='/lists'>Списки</Link></li>
+          <li><Link to='/presentations'>Презентации</Link></li>
+        </ul> 
+        
       </Layout>
     );
   }
 }
 
-export default BlogIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
-      }
-    }
-  }
-`;
+export default Index;
