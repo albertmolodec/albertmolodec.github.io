@@ -1,6 +1,6 @@
 ---
 title: Пять российских короткометражек, которые лучше и дешевле, чем последние «Ёлки»
-date: "2018-01-24T00:00:00.000Z"
+date: '2018-01-24T00:00:00.000Z'
 ---
 
 Широкая публика плохо знакома с коротким метром. Такие фильмы не показывают в кинотеатрах, а увидеть их можно только на фестивалях и на YouTube. Тем не менее, в пяти- или сорокаминутных фильмах можно уместить то же, что авторы российских сериалов растягивают на целые сезоны.
@@ -10,9 +10,9 @@ date: "2018-01-24T00:00:00.000Z"
 
 Чем вы займетесь, если узнаете, что жить осталось всего тридцать дней? Главный герой фильма «Спринт» решает закрыться в квартире и закончить роман всей своей жизни.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/A64cgEdAFBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | 
-|:--:| 
-| *Спринт, 2015* |
+| <iframe width="800" height="450" src="https://www.youtube.com/embed/A64cgEdAFBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                        _Спринт, 2015_                                                                        |
 
 ## #Всёпока
 
@@ -20,17 +20,17 @@ date: "2018-01-24T00:00:00.000Z"
 
 Старшее поколение отчаянно борется с непонятными им явлениями с помощью запретов, младшее — пытается обратить внимание на причины подростковых самоубийств: невнимание родителей или, наоборот, тотальный контроль за ребенком.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/XqQ7574NqzE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | 
-|:--:| 
-| *#ВсёПока, 2017* |
+| <iframe width="800" height="450" src="https://www.youtube.com/embed/XqQ7574NqzE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                       _#ВсёПока, 2017_                                                                       |
 
 ## Пиндос
 
 Фильм, снятый одним дублем, раскрывает загадочную русскую душу. Мы защищаем своих и прогоняем чужих — это нормально. Но может ли приезжий американец стать таким вот «своим» для ребят из глубинки? На этот вопрос отвечает четырехминутный фильм «Пиндос».
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/Ufcwrz6aBBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | 
-|:--:| 
-| *Пиндос, 2015* |
+| <iframe width="800" height="450" src="https://www.youtube.com/embed/Ufcwrz6aBBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                        _Пиндос, 2015_                                                                        |
 
 ## Пробуждение
 
@@ -38,18 +38,18 @@ date: "2018-01-24T00:00:00.000Z"
 
 В главной роли Владимир Вдовиченков.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/K8aP8oQlf-w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | 
-|:--:| 
-| *Пробуждение, 2015* |
+| <iframe width="800" height="450" src="https://www.youtube.com/embed/K8aP8oQlf-w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                     _Пробуждение, 2015_                                                                      |
 
 ## Общество анонимных оптимистов
 
 Ржавый из «Даёшь молодёжь» убегает от депрессии.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/anUNof7U3pw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | 
-|:--:| 
-| *Общество анонимных оптимистов, 2015* |
+| <iframe width="800" height="450" src="https://www.youtube.com/embed/anUNof7U3pw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                            _Общество анонимных оптимистов, 2015_                                                             |
 
- --------
+---
 
 Специально для [Интернет-издания «Дзе»](https://vk.com/dze.media).

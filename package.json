@@ -10,7 +10,6 @@
     "gatsby-plugin-offline": "^2.0.21",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-sharp": "^2.0.17",
-    "gatsby-plugin-typography": "^2.2.5",
     "gatsby-plugin-yandex-metrika": "^1.3.0",
     "gatsby-remark-copy-linked-files": "^2.0.8",
     "gatsby-remark-images": "^3.0.1",
@@ -23,18 +22,18 @@
     "prismjs": "^1.15.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.18",
-    "typeface-merriweather": "0.0.54",
-    "typeface-montserrat": "0.0.54",
-    "typography": "^0.16.18",
-    "typography-theme-wordpress-2016": "^0.16.18"
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.3",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0"
   },
   "homepage": "https://github.com/albertmolodec/albertmolodec.github.io",
   "keywords": [
@@ -48,16 +47,15 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
     "build": "gatsby build",
-    "gh-pages": "gh-pages -d public -b master",
     "serve": "gatsby serve -p 9000 -o",
+    "lint:js": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:css": "./node_modules/.bin/stylelint src/**/*.css",
+    "lint": "npm run lint:js && npm run lint:css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\"",
+    "gh-pages": "gh-pages -d public -b master",
     "deploy": "gatsby build && gh-pages -d public -b master",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
     "push-source": "git checkout source && git push origin source"
   }
 }
