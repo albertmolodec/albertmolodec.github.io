@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'iAWriter Duo';
+  src: url('../assets/fonts/iAWriterDuoS-Regular.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAWriter Duo';
+  src: url('../assets/fonts/iAWriterDuoS-Bold.woff2') format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAWriter Duo';
+  src: url('../assets/fonts/iAWriterDuoS-Italic.woff2') format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'iAWriter Duo';
+  src: url('../assets/fonts/iAWriterDuoS-BoldItalic.woff2') format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+@font-face {
+  font-family: 'PermianSerifTypeface';
+  src: url('../assets/fonts/PermianSerifTypeface.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PermianSansTypeface';
+  src: url('../assets/fonts/PermianSansTypeface-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PermianSlabSerifTypeface';
+  src: url('../assets/fonts/PermianSlabSerifTypeface.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PermianSerifTypeface';
+  src: url('../assets/fonts/PermianSerifTypeface-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PermianSerifTypeface';
+  src: url('../assets/fonts/PermianSerifTypeface-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PermianSansTypeface';
+  src: url('../assets/fonts/PermianSansTypeface.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PermianSlabSerifTypeface';
+  src: url('../assets/fonts/PermianSlabSerifTypeface-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PermianSlabSerifTypeface';
+  src: url('../assets/fonts/PermianSlabSerifTypeface-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PermianSansTypeface';
+  src: url('../assets/fonts/PermianSansTypeface-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}

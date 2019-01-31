@@ -10,8 +10,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content`,
-        name: 'content',
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -65,7 +72,14 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/favicon.jpg`,
+        icon: `static/favicon.png`,
+        icons: [
+          {
+            src: `/favicons/android-chrome-512x512.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,
