@@ -6,7 +6,7 @@ module.exports = {
     es6: true,
   },
   extends: ['eslint:recommended', 'airbnb', 'prettier', 'prettier/react'],
-  plugins: ['react', 'prettier'],
+  plugins: ['react', 'prettier', 'react-hooks'],
   parserOptions: {
     ecmaVersion: 2016,
     sourceType: 'module',
@@ -20,5 +20,6 @@ module.exports = {
   rules: {
     'react/prefer-stateless-function': 'off',
     'react/prop-types': 'off',
+    "react-hooks/rules-of-hooks": 'error',
   },
 };
