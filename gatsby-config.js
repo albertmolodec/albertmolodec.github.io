@@ -28,10 +28,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-              resize: {
-                quality: 90,
-              },
+              maxWidth: 840,
             },
           },
           {
@@ -50,8 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        useMozJpeg: false,
-        stripMetadata: true,
+        useMozJpeg: true,
       },
     },
     {
@@ -73,16 +69,8 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `static/favicon.png`,
-        icons: [
-          {
-            src: `/favicons/android-chrome-512x512.png`,
-            sizes: `32x32`,
-            type: `image/png`,
-          },
-        ],
       },
     },
-    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
 };
