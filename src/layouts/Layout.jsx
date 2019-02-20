@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
+import Header from './Header';
 
 class Layout extends React.Component {
   render() {
@@ -10,13 +11,11 @@ class Layout extends React.Component {
       <Fragment>
         <Helmet
           htmlAttributes={{ lang: 'ru' }}
-          // TO DO: meta={[{ name: 'description', content: siteDescription }]}
           meta={[{ name: 'description' }]}
           title={title}
         />
-        <div>
-          {children}
-        </div>
+        <Header location={location}/>
+        <div>{children}</div>
       </Fragment>
     );
   }

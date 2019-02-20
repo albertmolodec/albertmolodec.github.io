@@ -1,8 +1,7 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
+import Layout from '../layouts/Layout';
 import { formatReadingTime } from '../utils/helpers';
 
 class BlogPostTemplate extends React.Component {
