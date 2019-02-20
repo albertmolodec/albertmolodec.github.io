@@ -1,13 +1,10 @@
 import React, { Fragment } from 'react';
-import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props;
-    console.log(this.props);
     const rootPath = `${__PATH_PREFIX__}/`;
-    console.log(rootPath);
 
     return (
       <Fragment>
