@@ -7,23 +7,16 @@ import Layout from '../../layouts/Layout';
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const siteDescription = data.site.siteMetadata.description;
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Helmet
-          htmlAttributes={{ lang: 'ru' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
-        />
+      <Layout>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
             <div key={node.fields.slug}>
               <h3>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link to={`/${node.fields.slug}`}>
                   {title}
                 </Link>
               </h3>

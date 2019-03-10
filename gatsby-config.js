@@ -3,7 +3,7 @@ module.exports = {
     title: 'AlbertMolodec',
     author: 'Альберт Абдульманов',
     description: 'Пишу код и тексты',
-    siteUrl: 'https://github.com/albertmolodec/albertmolodec.github.io/',
+    siteUrl: 'https://albertmolodec.github.io/',
   },
   pathPrefix: '/albertmolodec-website',
   plugins: [
@@ -73,5 +73,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
   ],
 };

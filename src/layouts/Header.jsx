@@ -1,51 +1,63 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-function Header(props) {
+const Header = props => {
+  const partiallyActive = className => ({ isPartiallyCurrent }) => ({
+    className: className + (isPartiallyCurrent ? ` active` : ``),
+  })
+  
+  const PartiallyActiveLink = ({ className, ...rest }) => (
+    <Link getProps={partiallyActive(className)} {...rest} />
+  )
+
   const tabs = [
     {
-      type: 'main',
       name: 'Главная',
       link: '/',
     },
     {
-      type: 'projects',
       name: 'Проекты',
-      link: '/projects',
+      link: '/projects/',
     },
     {
-      type: 'blog',
       name: 'Блог',
-      link: '/blog',
+      link: '/blog/',
     },
     {
-      type: 'travel',
       name: 'Путешествия',
-      link: '/travel',
+      link: '/travel/',
     },
     {
-      type: 'lists',
       name: 'Списки',
-      link: '/lists',
+      link: '/lists/',
     },
   ];
-  
-  const { location } = props;
-  const activeTab = location.pathname.split('/')[1];
+
+  const { siteTitle } = props;
 
   return (
     <nav>
+      <b>{siteTitle}</b>
       <ul>
         {tabs.map(tab => (
-          <li key={tab.type}>
-            <Link to={tab.link}>
-              {tab.name} {activeTab === tab.type && '«'}
-            </Link>
+          <li key={tab.link}>
+            <PartiallyActiveLink to={tab.link}>
+              {tab.name}
+            </PartiallyActiveLink>
           </li>
         ))}
       </ul>
     </nav>
   );
-}
+};
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+};
+
+Header.defaultProps = {
+  siteTitle: ``,
+};
 
 export default Header;

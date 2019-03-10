@@ -28,3 +28,8 @@ body.dark {
   --inlineCode-bg: hsl(222, 14%, 25%);
   --inlineCode-text: #e6e6e6;
 }
+
+.active {
+  color: blueviolet;
+  font-weight: bold;
+}

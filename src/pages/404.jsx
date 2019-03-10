@@ -1,15 +1,15 @@
 import React from 'react';
-import Layout from '../layouts/Layout';
+import { Link } from 'gatsby';
 
-class NotFoundPage extends React.Component {
-  render() {
-    return (
-      <Layout location={this.props.location}>
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Layout>
-    );
-  }
-}
+import Layout from '../layouts/Layout';
+import SEO from '../components/SEO';
+
+const NotFoundPage = () => (
+  <Layout>
+    <SEO title="Page two" />
+    <h1>Page not found</h1>
+    <Link to="/">Go back to the homepage</Link>
+  </Layout>
+);
 
 export default NotFoundPage;

@@ -20,6 +20,7 @@ module.exports = {
   rules: {
     'react/prefer-stateless-function': 'off',
     'react/prop-types': 'off',
-    "react-hooks/rules-of-hooks": 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 };
