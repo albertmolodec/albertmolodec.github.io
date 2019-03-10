@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <div>
-      <small style={{ color: "#555" }}>Последний билд: {buildTime}</small>
+      <small style={{ color: "#555" }}>Последняя сборка: {buildTime}</small>
     </div>
   );
 }
