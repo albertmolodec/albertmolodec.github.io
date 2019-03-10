@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const Header = props => {
+function Header() {
   const partiallyActive = className => ({ isPartiallyCurrent }) => ({
     className: className + (isPartiallyCurrent ? ` active` : ``),
   })
@@ -34,11 +33,8 @@ const Header = props => {
     },
   ];
 
-  const { siteTitle } = props;
-
   return (
     <nav>
-      <b>{siteTitle}</b>
       <ul>
         {tabs.map(tab => (
           <li key={tab.link}>
@@ -50,14 +46,6 @@ const Header = props => {
       </ul>
     </nav>
   );
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
 };
 
 export default Header;

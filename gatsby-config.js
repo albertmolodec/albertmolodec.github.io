@@ -4,8 +4,18 @@ module.exports = {
     author: 'Альберт Абдульманов',
     description: 'Пишу код и тексты',
     siteUrl: 'https://albertmolodec.github.io/',
+    social: {
+      email: 'albert.abdu@gmail.com',
+      twitter: 'albert_molodec',
+      instagram: 'albert.molodec',
+      facebook: 'albert.molodec',
+      github: 'albertmolodec',
+      moikrug: 'albertmolodec',
+      linkedin: 'albert-abdulmanov-5b94a316b',
+      codepen: 'albertmolodec',
+    },
   },
-  pathPrefix: '/albertmolodec-website',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -17,8 +27,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
     {
@@ -28,7 +38,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 840,
+              maxWidth: 590,
               showCaptions: true,
             },
           },

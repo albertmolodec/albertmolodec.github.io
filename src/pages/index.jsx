@@ -7,7 +7,7 @@ import Animation from '../components/animation';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Главная" keywords={[`gatsby`, `albertmolodec`, `react`]} />
+    <SEO title="Главная" keywords={[`личный блог`, `gatsby`, `albertmolodec`, `react`]} />
     <Link to="/">Go back to the homepage</Link>
     <Animation style={{ display: 'block', margin: '0 auto' }} />
   </Layout>

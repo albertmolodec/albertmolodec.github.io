@@ -1,10 +1,14 @@
 import React from 'react';
+import { useBuildTime } from '../helpers/customHooks';
 
-const Footer = () => (
-  <div>
-    AlbertMolodec | {new Date().getFullYear()} |{' '}
-    <a href="https://github.com/albertmolodec">Github</a>
-  </div>
-);
+function Footer() {
+  const buildTime = useBuildTime();
+
+  return (
+    <div>
+      <small style={{ color: "#aaa" }}>Последний билд: {buildTime}</small>
+    </div>
+  );
+}
 
 export default Footer;
