@@ -3,6 +3,8 @@ module.exports = {
     title: 'AlbertMolodec',
     author: 'Альберт Абдульманов',
     description: 'Пишу код и тексты',
+    viewport:
+      'width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no',
     siteUrl: 'https://albertmolodec.github.io/',
     social: {
       email: 'albert.abdu@gmail.com',
@@ -69,12 +71,23 @@ module.exports = {
         trackHash: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-amp`,
+      options: {
+        canonicalBaseUrl: 'https://albertmolodec.github.io/',
+        components: ['amp-form'],
+        excludedPaths: ['/404*', '/'],
+        pathIdentifier: '/amp/',
+        relAmpHtmlPattern: '{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}',
+        useAmpClientIdApi: true,
+      },
+    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `AlbertMolodec website`,
-        short_name: `AlbertMolodec`,
+        short_name: `Albert`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

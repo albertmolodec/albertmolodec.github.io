@@ -4,6 +4,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogPost = path.resolve(`./src/templates/blog-post.jsx`);
+  const blogPostAmp = path.resolve(`./src/templates/blog-post.amp.jsx`);
 
   return graphql(
     `
@@ -41,6 +42,17 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      });
+
+      // AMP версия
+      createPage({
+        path: `${post.node.fields.slug}amp`,
+        component: blogPostAmp,
         context: {
           slug: post.node.fields.slug,
           previous,

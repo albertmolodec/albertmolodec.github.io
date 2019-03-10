@@ -12,6 +12,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             title
             description
             author
+            viewport
           }
         }
       }
@@ -28,6 +29,10 @@ function SEO({ description, lang, meta, keywords, title }) {
       title={title}
       titleTemplate="%s"
       meta={[
+        {
+          name: 'viewport',
+          content: site.siteMetadata.viewport,
+        },
         {
           name: `description`,
           content: metaDescription,

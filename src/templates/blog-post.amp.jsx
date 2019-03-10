@@ -44,7 +44,7 @@ function BlogPostTemplate({ pageContext, data }) {
 }
 
 export const pageQuery = graphql`
-  query BlogPostBySlugAmp($slug: String!) {
+  query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt
