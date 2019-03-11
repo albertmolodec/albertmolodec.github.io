@@ -31,6 +31,10 @@ function Header() {
       name: 'Списки',
       link: '/lists/',
     },
+    {
+      name: 'Эксперименты',
+      link: '/experiments/',
+    },
   ];
 
   return (

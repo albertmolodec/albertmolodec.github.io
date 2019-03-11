@@ -5,9 +5,9 @@ function Footer() {
   const buildTime = useBuildTime();
 
   return (
-    <div>
-      <small style={{ color: "#555" }}>Последняя сборка: {buildTime}</small>
-    </div>
+    <footer>
+      <small>Последняя сборка: {buildTime}</small>
+    </footer>
   );
 }
 

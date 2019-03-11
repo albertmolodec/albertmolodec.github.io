@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Presentations() {
+function Experiments() {
   const [count, setCount] = useState(0);
   const [banana, setBanana] = useState({
     width: 20,
@@ -44,4 +44,4 @@ function Presentations() {
   );
 }
 
-export default Presentations;
+export default Experiments;

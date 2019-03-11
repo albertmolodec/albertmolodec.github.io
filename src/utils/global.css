@@ -1,9 +1,6 @@
 body {
   --pink: #d23669;
   --purpleHeart: #7633e2;
-  margin: 0 auto;
-  padding: 15px;
-  max-width: 600px;
 }
 
 body.light {
