@@ -1,45 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect, useCallback } from 'react';
 
 function Experiments() {
-  const [count, setCount] = useState(0);
-  const [banana, setBanana] = useState({
-    width: 20,
-    height: 60,
-  });
+  const [query, setQuery] = useState('react');
+  const [data, setData] = useState();
 
-  const fetchData = async () => {
-    const data = await (await fetch(
-      'https://jsonplaceholder.typicode.com/posts/1/comments',
-    )).json();
+  // ✅ Preserves identity until query changes
+  const getFetchUrl = useCallback(() => {
+    return 'https://hn.algolia.com/api/v1/search?query=' + query;
+  }, [query]); // ✅ Callback deps are OK
+
+  const fetchData = async url => {
+    const response = await fetch(url);
+    const data = await response.json();
     console.log(data);
+    setData(data);
   };
 
   useEffect(() => {
-    fetchData();
-  });
-
-  const incrementBananaHeight = () => {
-    setBanana({
-      ...banana,
-      height: banana.height + 1,
-    });
-
-    return () => console.log('cleaned');
-  };
+    const url = getFetchUrl();
+    fetchData(url);
+  }, [getFetchUrl]); // ✅ Effect deps are OK
 
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button type="button" onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-      <br />
-      <p>
-        Size of banana: {banana.width} x {banana.height}
-      </p>
-      <button type="button" onClick={incrementBananaHeight}>
-        Increment banana height
-      </button>
+      <h1>Поиск по хакерньюс</h1>
+      <input value={query} onChange={e => setQuery(e.target.value)} />
+      {data && <h3>{data.nbHits} результатов</h3>}
+      {data &&
+        data.hits.map(item => (
+          <Fragment key={item.created_at}>
+            <p>
+              <a style={{ paddingTop: '10px' }} href={item.url}>
+                {item.title}
+              </a>
+              <small style={{ display: 'block' }}>{new Date(item.created_at).toLocaleString()}</small>
+            </p>
+          </Fragment>
+        ))}
     </div>
   );
 }
