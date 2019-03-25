@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
 import { useStaticQuery, graphql } from 'gatsby';
-import { format } from 'date-fns';
+import dayjs from 'dayjs';
 
 export function useBuildTime() {
   const data = useStaticQuery(graphql`
@@ -12,10 +12,7 @@ export function useBuildTime() {
     }
   `);
 
-  const localBuildTime = format(
-    new Date(data.site.buildTime),
-    'HH:mm dd.MM.yyyy',
-  );
+  const localBuildTime = dayjs(data.site.buildTime).format('HH:mm DD.MM.YYYY');
 
   return localBuildTime;
 }

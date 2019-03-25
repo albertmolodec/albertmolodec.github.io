@@ -4,11 +4,11 @@ import { Link } from 'gatsby';
 function Header() {
   const partiallyActive = className => ({ isPartiallyCurrent }) => ({
     className: className + (isPartiallyCurrent ? ` active` : ``),
-  })
-  
+  });
+
   const PartiallyActiveLink = ({ className, ...rest }) => (
     <Link getProps={partiallyActive(className)} {...rest} />
-  )
+  );
 
   const tabs = [
     {
@@ -20,7 +20,7 @@ function Header() {
       link: '/projects/',
     },
     {
-      name: 'Блог',
+        name: 'Блог',
       link: '/blog/',
     },
     {
@@ -42,14 +42,12 @@ function Header() {
       <ul>
         {tabs.map(tab => (
           <li key={tab.link}>
-            <PartiallyActiveLink to={tab.link}>
-              {tab.name}
-            </PartiallyActiveLink>
+            <PartiallyActiveLink to={tab.link}>{tab.name}</PartiallyActiveLink>
           </li>
         ))}
       </ul>
     </nav>
   );
-};
+}
 
 export default Header;
