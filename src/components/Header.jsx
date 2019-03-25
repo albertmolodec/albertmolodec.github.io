@@ -24,16 +24,8 @@ function Header() {
       link: '/blog/',
     },
     {
-      name: 'Путешествия',
-      link: '/travel/',
-    },
-    {
       name: 'Списки',
       link: '/lists/',
-    },
-    {
-      name: 'Эксперименты',
-      link: '/experiments/',
     },
   ];
 
