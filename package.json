@@ -37,11 +37,13 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-stylelint": "^3.2.0",
     "gh-pages": "^2.0.1",
     "postcss-nested": "^4.1.2",
     "postcss-preset-env": "^6.6.0",
     "prettier": "^1.17.0",
     "stylelint": "^10.0.0",
+    "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^3.0.0",
     "why-did-you-update": "^1.0.6"
