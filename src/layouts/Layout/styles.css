@@ -1,0 +1,17 @@
+.page {
+  display: grid;
+
+  grid-template-rows: minmax(40px, auto) 1fr minmax(auto, 20px);
+  min-height: 100vh;
+}
+
+main {
+}
+
+.page-header {
+  border: 1px dashed var(--secondary-color);
+}
+
+.page-footer {
+  border: 1px dashed var(--secondary-color);
+}
