@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../../layouts/Layout';
+import Layout from '~src/layouts/Layout';
 
-function TravelPage(props) {
+function TravelPage({ location }) {
   return (
-    <Layout location={props.location}>
+    <Layout location={location}>
       <p>Путешествия</p>
     </Layout>
   );

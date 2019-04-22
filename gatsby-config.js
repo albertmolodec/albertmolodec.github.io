@@ -34,6 +34,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '~src': 'src',
+          '~content': 'content',
+          '~static': 'static',
+          '~plugins': 'plugins',
+        },
+        extensions: ['js', 'jsx'],
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -97,7 +109,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
-    'gatsby-plugin-root-import',
     'gatsby-plugin-stylelint',
     'gatsby-plugin-postcss',
   ],

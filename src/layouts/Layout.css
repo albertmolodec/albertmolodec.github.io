@@ -1,11 +1,30 @@
 body {
   display: grid;
+
+  /* gap: [grid-columns grid-rows] */
+  grid:
+    ' .            content        aside      '
+    / var(--side) var(--middle) var(--side);
+  grid-gap: 0 var(--gap);
   grid-template-rows: minmax(40px, auto) 1fr minmax(auto, 20px);
   min-height: 100vh;
 
-  background-color: var(--background-color);
+  --middle: minmax(24rem, 42rem);
+  --side: minmax(min-content, 1fr);
+  --gap: 1rem;
 }
 
 main {
+  display: grid;
   padding: 1em;
+
+  border: 1px dashed var(--primary-color);
+}
+
+.page-header {
+  border: 1px dashed var(--secondary-color);
+}
+
+.page-footer {
+  border: 1px dashed var(--secondary-color);
 }
