@@ -6,7 +6,7 @@ function Experiments() {
 
   // ✅ Preserves identity until query changes
   const getFetchUrl = useCallback(() => {
-    return 'https://hn.algolia.com/api/v1/search?query=' + query;
+    return `https://hn.algolia.com/api/v1/search?query=${query}`;
   }, [query]); // ✅ Callback deps are OK
 
   const fetchData = async url => {

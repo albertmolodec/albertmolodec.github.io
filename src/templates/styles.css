@@ -1,0 +1,18 @@
+.article {
+  display: grid;
+
+  /* gap: [grid-columns grid-rows] */
+  grid:
+    ' .            content        aside      '
+    / var(--side) var(--middle) var(--side);
+  grid-gap: 0 var(--gap);
+  padding: 1em;
+
+  --middle: minmax(24rem, 42rem);
+  --side: minmax(min-content, 1fr);
+  --gap: 1rem;
+}
+
+.content {
+  grid-column: content;
+}

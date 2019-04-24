@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '../layouts/Layout';
-import SEO from '../components/SEO';
+import Layout from '~src/layouts/Layout';
+import SEO from '~src/components/SEO';
 
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Страница не найдена" />
-    <h1>Page not found</h1>
-    <Link to="/">Go back to the homepage</Link>
+    <h1>Страница не найдена</h1>
+    <Link to="/">На главную</Link>
   </Layout>
 );
 

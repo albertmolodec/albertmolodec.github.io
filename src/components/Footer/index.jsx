@@ -1,11 +1,11 @@
 import React from 'react';
-import { useBuildTime } from '../helpers/customHooks';
+import { useBuildTime } from '~src/helpers/customHooks';
 
 function Footer() {
   const buildTime = useBuildTime();
 
   return (
-    <footer>
+    <footer className="page-footer">
       <small>Последняя сборка: {buildTime}</small>
     </footer>
   );

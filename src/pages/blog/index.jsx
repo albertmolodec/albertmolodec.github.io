@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 
-import Layout from '../../layouts/Layout';
-import SEO from '../../components/SEO';
-import formatReadingTime from '../../helpers/formatReadingTime';
+import Layout from '~src/layouts/Layout';
+import SEO from '~src/components/SEO';
+import formatReadingTime from '~src/helpers/formatReadingTime';
 
 function BlogIndex() {
   const { allMarkdownRemark } = useStaticQuery(
@@ -49,7 +49,9 @@ function BlogIndex() {
             <h3>
               <Link to={`/${node.fields.slug}`}>{title}</Link>
             </h3>
-            <small>{node.frontmatter.date} • {formatReadingTime(node.timeToRead)}</small>
+            <small>
+              {node.frontmatter.date} • {formatReadingTime(node.timeToRead)}
+            </small>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         );

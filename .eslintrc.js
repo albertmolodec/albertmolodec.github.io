@@ -8,7 +8,7 @@ module.exports = {
   extends: ['eslint:recommended', 'airbnb', 'prettier', 'prettier/react'],
   plugins: ['react', 'prettier', 'react-hooks'],
   parserOptions: {
-    ecmaVersion: 2016,
+    ecmaVersion: 2019,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -23,5 +23,19 @@ module.exports = {
     'react/no-danger': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'import/no-extraneous-dependencies': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['~src', './src'],
+          ['~content', './content'],
+          ['~static', './static'],
+          ['~plugins', './plugins'],
+        ],
+        extensions: ['.js', '.jsx'],
+      },
+    },
   },
 };
