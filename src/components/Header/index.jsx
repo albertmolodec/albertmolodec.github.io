@@ -27,6 +27,10 @@ function Header() {
       name: 'Списки',
       link: '/lists/',
     },
+    {
+      name: 'Презентации',
+      link: '/presentations/',
+    },
   ];
 
   return (
