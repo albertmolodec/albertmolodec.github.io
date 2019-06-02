@@ -6,7 +6,7 @@
   "dependencies": {
     "dayjs": "^1.8.12",
     "gatsby": "^2.3.29",
-    "gatsby-plugin-amp": "^0.2.1",
+    "gatsby-plugin-amp": "^0.2.2",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-feed": "^2.1.1",
     "gatsby-plugin-manifest": "^2.0.29",
