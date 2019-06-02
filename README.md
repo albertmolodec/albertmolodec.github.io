@@ -58,3 +58,7 @@
 
 Использовал [Starter Gatsby Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 Вдохновлялся [блогом Дэна Абрамова](https://overreacted.io/). Собирал [я](https://twitter.com/albert_molodec).
+
+## Рекомендации по именованию коммитов
+
+Эмодзи перечислены здесь: https://gitmoji.carloscuesta.me/

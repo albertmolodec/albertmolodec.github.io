@@ -1,11 +1,13 @@
-body {
+:root {
   --background-color: #F5F5F5;
   --primary-color: #364F6B;
   --accent-color: #FC5185;
   --secondary-color: #3FC1C9;
 
   --font-size: 16px;
+}
 
+body {
   font-size: var(--font-size);
 
   background: var(--background-color);
