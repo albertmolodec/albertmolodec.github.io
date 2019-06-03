@@ -8,13 +8,13 @@ module.exports = {
     siteUrl: 'https://albertmolodec.github.io/',
     social: {
       email: 'albert.abdu@gmail.com',
-      twitter: 'albert_molodec',
-      instagram: 'albert.molodec',
-      facebook: 'albert.molodec',
+      twitter: 'albertmolodec',
+      instagram: 'albertmolodec',
       github: 'albertmolodec',
       moikrug: 'albertmolodec',
-      linkedin: 'albert-abdulmanov-5b94a316b',
       codepen: 'albertmolodec',
+      facebook: 'albert.molodec',
+      linkedin: 'albert-abdulmanov-5b94a316b',
     },
   },
   pathPrefix: '/',
@@ -73,14 +73,6 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         useMozJpeg: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-yandex-metrika`,
-      options: {
-        trackingId: '51163475',
-        webvisor: false,
-        trackHash: true,
       },
     },
     {
