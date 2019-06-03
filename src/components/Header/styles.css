@@ -1,0 +1,30 @@
+.page-header {
+  color: var(--accent-color);
+
+  .list {
+    padding: 0;
+
+    list-style: none;
+
+    :not(:first-child) {
+      margin-left: 16px;
+    }
+  }
+
+  .list-item {
+    display: inline;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    font-weight: bold;
+  }
+}

@@ -5,9 +5,14 @@
   min-height: 100vh;
 }
 
-main {
-  max-width: 600px;
+main,
+.page-header,
+.page-footer {
+  display: block;
+  min-width: var(--desktop-width);
+  max-width: var(--desktop-width);
   margin: 0 auto;
+  padding: var(--desktop-padding);
 }
 
 .page-header {

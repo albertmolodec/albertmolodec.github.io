@@ -1,26 +1,33 @@
 :root {
-  --background-color: #F5F5F5;
-  --primary-color: #364F6B;
-  --accent-color: #FC5185;
-  --secondary-color: #3FC1C9;
+  --pink: #FC5185;
+  --light-grey: #F5F5F5;
+  --dark-blue: #364F6B;
+  --light-blue: #3FC1C9;
 
   --font-size: 16px;
+
+  --desktop-width: 42rem;
+  --desktop-padding: 2.625rem 1.3125rem;
 }
 
 body {
   font-size: var(--font-size);
 
-  background: var(--background-color);
+  --primary-color: var(--dark-blue);
+  --background-color: var(--light-grey);
+
+  --accent-color: var(--pink);
+  --secondary-color: var(--light-blue);
 }
 
 body.light {
+  --primary-color: var(--dark-blue);
+  --background-color: var(--light-grey);
 }
 
 body.dark {
-  -webkit-font-smoothing: antialiased;
-}
+  --primary-color: var(--light-grey);
+  --background-color: var(--dark-blue);
 
-.active {
-  color: var(--accent-color);
-  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
