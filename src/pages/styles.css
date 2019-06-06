@@ -1,6 +1,16 @@
 main {
-
   position: relative;
 
-  font-size: 1.15em;
+  margin: auto;
+
+  font-size: 1.15rem;
+
+  .introducion {
+    font-size: 1.33em;
+
+    .name {
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+  }
 }

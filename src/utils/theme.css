@@ -6,6 +6,10 @@ html {
   box-shadow: none;
 }
 
+a {
+  color: var(--primary-color);
+}
+
 p code {
   font-size: 1.1rem;
 }

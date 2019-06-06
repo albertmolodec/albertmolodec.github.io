@@ -1,5 +1,7 @@
 import React from 'react';
 import NavLink from '~src/components/NavLink';
+import Button from '~src/ui/Button';
+import sunSvg from '~src/assets/images/sun.svg';
 import TABS from './tabs';
 
 import './styles.css';
@@ -16,6 +18,9 @@ function Header() {
           ))}
         </ul>
       </nav>
+      <Button>
+        <img src={sunSvg} alt="Изменить тему" />
+      </Button>
     </header>
   );
 }

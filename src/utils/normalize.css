@@ -357,3 +357,13 @@ template {
 [hidden] {
   display: none;
 }
+
+/** 
+ * Custom
+ */
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}

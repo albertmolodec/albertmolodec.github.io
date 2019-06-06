@@ -1,18 +1,26 @@
 .page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   color: var(--accent-color);
 
-  .nav {
-    padding: 0;
+  ul.nav {
+    display: flex;
 
     list-style: none;
 
-    :not(:first-child) {
-      margin-left: 16px;
+    :first-child {
+      padding-left: 0;
+    }
+
+    :last-child {
+      padding-right: 0;
     }
   }
 
   .nav-item {
-    display: inline;
+    padding: 0 8px;
 
     a {
       text-decoration: none;
