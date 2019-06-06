@@ -1,7 +1,7 @@
 .page-header {
   color: var(--accent-color);
 
-  .list {
+  .nav {
     padding: 0;
 
     list-style: none;
@@ -11,7 +11,7 @@
     }
   }
 
-  .list-item {
+  .nav-item {
     display: inline;
 
     a {

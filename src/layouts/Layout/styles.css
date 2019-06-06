@@ -14,11 +14,3 @@ main,
   margin: 0 auto;
   padding: var(--desktop-padding);
 }
-
-.page-header {
-  /* border: 1px dashed var(--secondary-color); */
-}
-
-.page-footer {
-  /* border: 1px dashed var(--secondary-color); */
-}

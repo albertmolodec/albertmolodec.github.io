@@ -8,9 +8,9 @@ function Header() {
   return (
     <header className="page-header">
       <nav>
-        <ul className="list">
+        <ul className="nav">
           {TABS.map(tab => (
-            <li className="list-item" key={tab.link}>
+            <li className="nav-item" key={tab.link}>
               <NavLink to={tab.link}>{tab.name}</NavLink>
             </li>
           ))}

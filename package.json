@@ -5,8 +5,11 @@
   "author": "Albert Abdulmanov <albert.abdu@gmail.com>",
   "homepage": "https://github.com/albertmolodec/albertmolodec.github.io",
   "dependencies": {
+    "@mdx-js/mdx": "^1.0.0-rc.4",
+    "@mdx-js/react": "^1.0.0-rc.5",
     "dayjs": "^1.8.14",
     "gatsby": "^2.8.2",
+    "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-amp": "^0.2.2",
     "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-feed": "^2.2.2",

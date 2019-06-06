@@ -103,5 +103,6 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     'gatsby-plugin-stylelint',
     'gatsby-plugin-postcss',
+    `gatsby-mdx`,
   ],
 };
