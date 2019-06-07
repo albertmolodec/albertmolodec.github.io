@@ -4,25 +4,12 @@
   grid-template-rows: [navigation] auto [body] 1fr;
   min-height: 100vh;
 
-  @media (max-width: 36em) {
+  @media (max-width: 36rem) {
     grid-template-rows:
       [body] minmax(calc(100vh - 54px), 1fr)
       [navigation] 54px;
   }
 }
-
-/* main,
-.page-navigation,
-.page-footer {
-  width: 500px;
-  max-width: var(--desktop-width);
-  margin: 0 auto;
-  padding: var(--desktop-padding);
-
-  @media (max-width: 575px) {
-    padding: var(--mobile-padding);
-  }
-} */
 
 .page-body {
   display: grid;

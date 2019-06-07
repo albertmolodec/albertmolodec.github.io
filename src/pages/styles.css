@@ -1,11 +1,4 @@
-main {
-  position: relative;
-
-  @media (max-width: 36em) {
-    margin-top: 0;
-  }
-  margin-top: 10em;
-
+.main-wrapper {
   font-size: 1.15rem;
 
   .introducion {
@@ -15,5 +8,16 @@ main {
       color: var(--accent-color);
       font-weight: bold;
     }
+  }
+}
+
+.wrapper {
+  max-width: var(--breakpoint);
+
+  margin: 0 auto;
+  padding: var(--desktop-padding);
+
+  @media (max-width: 36rem) {
+    padding: var(--mobile-padding);
   }
 }

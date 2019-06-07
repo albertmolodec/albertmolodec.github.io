@@ -23,7 +23,9 @@ const Layout = ({ children }) => (
           <Navigation />
         </nav>
         <div className="page-body">
-          <main>{children}</main>
+          <div className="wrapper">
+            <main>{children}</main>
+          </div>
           <footer className="page-footer">
             <Footer />
           </footer>

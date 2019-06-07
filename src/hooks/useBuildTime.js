@@ -1,9 +1,7 @@
-/* eslint-disable import/prefer-default-export */
-
 import { useStaticQuery, graphql } from 'gatsby';
 import dayjs from 'dayjs';
 
-export function useBuildTime() {
+export default function useBuildTime() {
   const data = useStaticQuery(graphql`
     query Info {
       site {
