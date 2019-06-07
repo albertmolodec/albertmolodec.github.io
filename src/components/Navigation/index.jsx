@@ -1,6 +1,6 @@
 import React from 'react';
 import useWindowWidth from '~src/hooks/useWindowWidth';
-import NavLink from '~src/components/NavLink';
+import NavLink from '~src/ui/NavLink';
 import Button from '~src/ui/Button';
 import themeSwitcherSvg from '~src/assets/images/theme-switcher.svg';
 import TABS from './TABS';

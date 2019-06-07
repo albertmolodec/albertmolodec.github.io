@@ -93,8 +93,6 @@ button {
   margin: 0;
   padding: 0;
 
-  font: inherit;
-  font-size: 100%;
   vertical-align: baseline;
 
   border: 0;
@@ -209,7 +207,6 @@ audio:not([controls]) {
  */
 
 html {
-  font-size: 100%; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
 }
@@ -296,7 +293,6 @@ select,
 textarea {
   margin: 0; /* 2 */
 
-  font-size: 100%; /* 1 */
   vertical-align: middle; /* 3 */
 
   background: none;

@@ -17,8 +17,9 @@ const IndexPage = () => (
       <div className="description">
         <p>Привет.</p>
         <p className="introduction">
-          Меня зовут <span className="name">Альберт Абдульманов</span>. Я люблю
-          код и тексты. Не люблю овощи и неудобные сайты.
+          Меня зовут <span className="name">Альберт Абдульманов</span>.
+          Я&nbsp;люблю код и&nbsp;тексты. Не&nbsp;люблю овощи и&nbsp;неудобные
+          сайты.
         </p>
         <p>
           Я учусь на специалиста по информационной безопасности и работаю

@@ -1,7 +1,7 @@
 .main-wrapper {
   display: grid;
 
-  grid: 'image description' / 1fr 1fr;
+  grid: 'image description' / 2fr 3fr;
   padding-top: 4em;
 
   font-size: 1.15rem;
@@ -33,11 +33,13 @@
     justify-self: center;
 
     max-width: 100%;
-    max-height: 25rem;
+    max-height: 20em;
 
-    padding-right: 4rem;
+    margin-right: 2em;
 
     @media (max-width: 48rem) {
+      max-height: 50vh;
+      margin: 0;
     }
   }
 }

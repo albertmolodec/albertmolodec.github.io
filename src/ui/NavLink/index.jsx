@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
+import './styles.css';
+
 export default ({ ...props }) => {
   return (
     <Link
