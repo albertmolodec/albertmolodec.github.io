@@ -47,7 +47,7 @@ function BlogIndex() {
         return (
           <div key={node.fields.slug}>
             <h3>
-              <Link to={`/${node.fields.slug}`}>{title}</Link>
+              <Link to={`${node.fields.slug}`}>{title}</Link>
             </h3>
             <small>
               {node.frontmatter.date} • {formatReadingTime(node.timeToRead)}

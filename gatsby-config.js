@@ -7,14 +7,14 @@ module.exports = {
       'width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no',
     siteUrl: 'https://albertmolodec.github.io/',
     social: {
-      email: 'albert.abdu@gmail.com',
-      twitter: 'albert_molodec',
-      instagram: 'albert.molodec',
-      facebook: 'albert.molodec',
-      github: 'albertmolodec',
-      moikrug: 'albertmolodec',
-      linkedin: 'albert-abdulmanov-5b94a316b',
-      codepen: 'albertmolodec',
+      Email: 'mailto:albert.abdu@gmail.com',
+      Github: 'https://github.com/albertmolodec',
+      Codepen: 'https://codepen.io/albertmolodec/',
+      Twitter: 'https://twitter.com/albertmolodec',
+      Instagram: 'https://instagram.com/albertmolodec',
+      Facebook: 'https://www.facebook.com/profile.php?id=100001486167096',
+      LinkedIn: 'https://www.linkedin.com/in/albert-abdulmanov-5b94a316b/',
+      Moikrug: 'https://moikrug.ru/albertmolodec',
     },
   },
   pathPrefix: '/',
@@ -76,14 +76,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-yandex-metrika`,
-      options: {
-        trackingId: '51163475',
-        webvisor: false,
-        trackHash: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-amp`,
       options: {
         canonicalBaseUrl: 'https://albertmolodec.github.io/',
@@ -111,5 +103,6 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     'gatsby-plugin-stylelint',
     'gatsby-plugin-postcss',
+    `gatsby-mdx`,
   ],
 };

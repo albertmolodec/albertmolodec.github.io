@@ -1,26 +1,56 @@
 :root {
-  --background-color: #F5F5F5;
-  --primary-color: #364F6B;
-  --accent-color: #FC5185;
-  --secondary-color: #3FC1C9;
+  --pink: #FC5185;
+  --light-grey: #F5F5F5;
+  --dark-blue: #364F6B;
+  --light-blue: #3FC1C9;
 
   --font-size: 16px;
+
+  --desktop-padding: 1.625rem 1.3125rem;
+  --mobile-padding: 0.6rem 0.8rem;
+
+  --breakpoint: 48rem;
 }
 
 body {
-  font-size: var(--font-size);
+  --primary-color: var(--dark-blue);
+  --background-color: var(--light-grey);
 
-  background: var(--background-color);
+  --accent-color: var(--pink);
+  --secondary-color: var(--light-blue);
+
+  color: var(--primary-color);
+
+  font-size: var(--font-size);
+  @media (max-width: 48rem) {
+    font-size: 0.875rem;
+  }
+
+  background-color: var(--background-color);
 }
 
+/* Color Theme */
+
 body.light {
+  --primary-color: var(--dark-blue);
+  --background-color: var(--light-grey);
 }
 
 body.dark {
+  --primary-color: var(--light-grey);
+  --background-color: var(--dark-blue);
+
   -webkit-font-smoothing: antialiased;
 }
 
-.active {
-  color: var(--accent-color);
-  font-weight: bold;
+.wrapper {
+  width: 100%;
+  max-width: var(--breakpoint);
+
+  margin: 0 auto;
+  padding: var(--desktop-padding);
+
+  @media (max-width: 48rem) {
+    padding: var(--mobile-padding);
+  }
 }

@@ -6,7 +6,6 @@
     ' .            content        aside      '
     / var(--side) var(--middle) var(--side);
   grid-gap: 0 var(--gap);
-  padding: 1em;
 
   --middle: minmax(24rem, 42rem);
   --side: minmax(min-content, 1fr);

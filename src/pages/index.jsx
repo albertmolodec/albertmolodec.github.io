@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Animation from '~src/components/animation';
 import Layout from '~src/layouts/Layout';
 import SEO from '~src/components/SEO';
 
-import avatar from '~src/assets/images/low-poly-avatar.png';
+import avatar from '~src/assets/images/low-poly-avatar-hd.png';
+
+import './styles.css';
 
 const IndexPage = () => (
   <Layout>
@@ -12,9 +13,27 @@ const IndexPage = () => (
       title="Главная"
       keywords={[`личный блог`, `gatsby`, `albertmolodec`, `react`]}
     />
-    <img src={avatar} alt="Мой низкополигональный портрет" />
-    <p>Сайт в разработке</p>
-    <Animation style={{ display: 'block', margin: '20px 0' }} />
+    <div className="main-wrapper">
+      <div className="description">
+        <p>Привет.</p>
+        <p className="introduction">
+          Меня зовут <span className="name">Альберт Абдульманов</span>.
+          Я&nbsp;люблю код и&nbsp;тексты. Не&nbsp;люблю овощи и&nbsp;неудобные
+          сайты.
+        </p>
+        <p>
+          Я учусь на специалиста по информационной безопасности и работаю
+          фронтенд-разработчиком. Раньше был главредом и верстальщиком
+          факультетской газеты.
+        </p>
+        <p>Родился в Чусовом, живу в Перми и люблю путешествовать.</p>
+      </div>
+      <img
+        className="image"
+        src={avatar}
+        alt="Мой низкополигональный портрет"
+      />
+    </div>
   </Layout>
 );
 

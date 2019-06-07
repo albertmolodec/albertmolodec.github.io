@@ -2,12 +2,16 @@ html {
   font-family: PermianSansTypeface, system-ui, -apple-system, sans-serif;
 }
 
-a {
-  color: #D23669;
-}
-
 .anchor {
   box-shadow: none;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+p {
+  margin: 0.5em 0;
 }
 
 p code {
@@ -16,6 +20,10 @@ p code {
 
 li code {
   font-size: 1rem;
+}
+
+:focus {
+  outline: thin dotted;
 }
 
 /**

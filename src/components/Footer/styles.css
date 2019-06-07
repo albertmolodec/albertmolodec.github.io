@@ -1,0 +1,19 @@
+.footer-wrapper {
+  display: flex;
+}
+
+.contacts {
+  display: flex;
+
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 1.625em;
+
+  .contact-item {
+    padding: 0.2em 0.5em;
+  }
+}
+
+.hello-img {
+  margin-right: 0.5em;
+}

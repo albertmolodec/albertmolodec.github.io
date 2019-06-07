@@ -1,0 +1,41 @@
+.navigation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 48rem) {
+    height: 100%;
+
+    background-color: white;
+    border-top: 1px solid #E8E8E8;
+  }
+}
+
+.navigation-desktop-list {
+  display: flex;
+
+  color: var(--accent-color);
+
+  list-style: none;
+
+  :first-child {
+    padding-left: 0;
+  }
+
+  :last-child {
+    padding-right: 0;
+  }
+}
+
+.navigation-list--item {
+  padding: 0 0.5rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
