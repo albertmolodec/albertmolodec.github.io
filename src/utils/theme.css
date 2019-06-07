@@ -1,5 +1,5 @@
 html {
-  font-family: PermianSansTypeface, system-ui, -apple-system, sans-serif;
+  font-family: Roboto, PermianSansTypeface, system-ui, -apple-system, sans-serif;
 }
 
 .anchor {
@@ -8,6 +8,10 @@ html {
 
 a {
   color: var(--primary-color);
+}
+
+p {
+  margin: 0.5em 0;
 }
 
 p code {
