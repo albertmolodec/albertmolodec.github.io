@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 36rem) {
+  @media (max-width: 48rem) {
     height: 54px;
   }
 }
 
-.navigation-list {
+.navigation-desktop-list {
   display: flex;
 
   color: var(--accent-color);

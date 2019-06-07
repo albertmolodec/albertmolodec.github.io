@@ -1,23 +1,31 @@
 .main-wrapper {
+  display: grid;
+
+  grid: 'image description' / 1fr 1fr;
+
+  @media (max-width: 48rem) {
+    grid: 'image' 'description' / 1fr 1fr;
+  }
+
   font-size: 1.15rem;
 
-  .introducion {
-    font-size: 1.33em;
+  .description {
+    grid-area: description;
 
-    .name {
-      color: var(--accent-color);
-      font-weight: bold;
+    .introduction {
+      font-size: 1.33em;
+
+      .name {
+        color: var(--accent-color);
+        font-weight: bold;
+      }
     }
   }
-}
 
-.wrapper {
-  max-width: var(--breakpoint);
+  .image {
+    grid-area: image;
+    width: 100%;
 
-  margin: 0 auto;
-  padding: var(--desktop-padding);
-
-  @media (max-width: 36rem) {
-    padding: var(--mobile-padding);
+    text-align: center;
   }
 }

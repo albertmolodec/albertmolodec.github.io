@@ -4,9 +4,9 @@
   grid-template-rows: [navigation] auto [body] 1fr;
   min-height: 100vh;
 
-  @media (max-width: 36rem) {
+  @media (max-width: 48rem) {
     grid-template-rows:
-      [body] minmax(calc(100vh - 54px), 1fr)
+      [body] calc(100vh - 54px)
       [navigation] 54px;
   }
 }
@@ -16,7 +16,7 @@
   grid-row: body;
   grid-template-rows: [main] 1fr [footer] auto;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .page-navigation {
   grid-row: navigation;

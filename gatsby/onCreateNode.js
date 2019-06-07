@@ -8,7 +8,7 @@ module.exports = ({ node, actions, getNode }) => {
     createNodeField({
       name: 'slug',
       node,
-      value: `/blog${value}`,
+      value: `blog${value}`,
     });
   }
 
@@ -23,7 +23,7 @@ module.exports = ({ node, actions, getNode }) => {
       // Generated value based on filepath with "blog" prefix. We
       // don't need a separating "/" before the value because
       // createFilePath returns a path with the leading "/".
-      value: `/blog${value}`,
+      value: `blog${value}`,
     });
   }
 };

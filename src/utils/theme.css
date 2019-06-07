@@ -18,6 +18,10 @@ li code {
   font-size: 1rem;
 }
 
+:focus {
+  outline: thin dotted;
+}
+
 /**
  * Based on copypasta from Remy Bach and Sarah Drasner
  */
