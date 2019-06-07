@@ -5,9 +5,9 @@ function Footer() {
   const buildTime = useBuildTime();
 
   return (
-    <footer className="page-footer">
+    <div className="footer-wrapper">
       <small>Последняя сборка: {buildTime}</small>
-    </footer>
+    </div>
   );
 }
 

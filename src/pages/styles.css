@@ -1,7 +1,10 @@
 main {
   position: relative;
 
-  margin: auto;
+  @media (max-width: 36em) {
+    margin-top: 0;
+  }
+  margin-top: 10em;
 
   font-size: 1.15rem;
 

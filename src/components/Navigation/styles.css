@@ -1,12 +1,12 @@
-.page-header {
+.page-navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  color: var(--accent-color);
-
-  ul.nav {
+  ul.navigation-list {
     display: flex;
+
+    color: var(--accent-color);
 
     list-style: none;
 
@@ -19,7 +19,7 @@
     }
   }
 
-  .nav-item {
+  .navigation-list--item {
     padding: 0 8px;
 
     a {

@@ -6,22 +6,28 @@
 
   --font-size: 16px;
 
-  --desktop-width: 42rem;
   --desktop-padding: 1.625rem 1.3125rem;
+  --mobile-padding: 0.8rem;
 }
 
 body {
-  color: var(--primary-color);
-  font-size: var(--font-size);
-
-  background-color: var(--background-color);
-
   --primary-color: var(--dark-blue);
   --background-color: var(--light-grey);
 
   --accent-color: var(--pink);
   --secondary-color: var(--light-blue);
+
+  color: var(--primary-color);
+
+  font-size: var(--font-size);
+  @media (max-width: 36em) {
+    font-size: 0.875rem;
+  }
+
+  background-color: var(--background-color);
 }
+
+/* Color Theme */
 
 body.light {
   --primary-color: var(--dark-blue);

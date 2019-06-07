@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Header from '~src/components/Header';
+import Navigation from '~src/components/Navigation';
 import Footer from '~src/components/Footer';
 import './styles.css';
 
@@ -18,10 +18,16 @@ const Layout = ({ children }) => (
       }
     `}
     render={() => (
-      <div className="page">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <div className="layout">
+        <nav className="page-navigation">
+          <Navigation />
+        </nav>
+        <div className="page-body">
+          <main>{children}</main>
+          <footer className="page-footer">
+            <Footer />
+          </footer>
+        </div>
       </div>
     )}
   />
