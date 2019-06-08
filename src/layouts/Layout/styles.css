@@ -6,8 +6,8 @@
 
   @media (max-width: 48rem) {
     grid-template-rows:
-      [body] calc(100vh - 4em)
-      [navigation] 4em;
+      [body] calc(100vh - 44px)
+      [navigation] auto;
   }
 }
 
@@ -23,11 +23,11 @@
   grid-row: navigation;
 
   @media (max-width: 48rem) {
+    position: fixed;
+
     right: 0;
     bottom: 0;
     left: 0;
-
-    display: fixed;
   }
 }
 
