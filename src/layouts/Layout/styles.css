@@ -21,6 +21,14 @@
 
 .page-navigation {
   grid-row: navigation;
+
+  @media (max-width: 48rem) {
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: fixed;
+  }
 }
 
 main {

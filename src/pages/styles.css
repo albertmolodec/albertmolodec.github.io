@@ -2,12 +2,13 @@
   display: grid;
 
   grid: 'image description' / 2fr 3fr;
-  padding-top: 4em;
+  padding-top: 10%;
 
   font-size: 1.15rem;
 
   @media (max-width: 48rem) {
     grid: 'image' 'description' / 1fr;
+    padding-top: unset;
   }
 
   .description {
