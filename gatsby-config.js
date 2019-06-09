@@ -102,9 +102,7 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-      options: {
-        devMode: true,
-      },
+      options: {},
     },
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-svgr',

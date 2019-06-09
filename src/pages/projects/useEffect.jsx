@@ -1,6 +1,8 @@
 import React, { Fragment, useState, useEffect, useCallback } from 'react';
+import Layout from '~src/layouts/Layout';
+import SEO from '~src/components/SEO';
 
-function Experiments() {
+function useEffectPage({ location }) {
   const [query, setQuery] = useState('react');
   const [data, setData] = useState();
 
@@ -11,9 +13,8 @@ function Experiments() {
 
   const fetchData = async url => {
     const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    setData(data);
+    const responseData = await response.json();
+    setData(responseData);
   };
 
   useEffect(() => {
@@ -22,23 +23,37 @@ function Experiments() {
   }, [getFetchUrl]); // ✅ Effect deps are OK
 
   return (
-    <div>
+    <Layout location={location}>
+      <SEO
+        title="Проекты"
+        keywords={[`личный блог`, `gatsby`, `albertmolodec`, `react`]}
+      />
       <h1>Поиск по хакерньюс</h1>
-      <input value={query} onChange={e => setQuery(e.target.value)} />
+      <input
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        style={{
+          backgroundColor: 'white',
+          border: '1px solid lightgrey',
+          marginBottom: '20px',
+        }}
+      />
       {data && <h3>{data.nbHits} результатов</h3>}
       {data &&
         data.hits.map(item => (
           <Fragment key={item.created_at}>
             <p>
-              <a style={{ paddingTop: '10px' }} href={item.url}>
+              <a style={{ marginTop: '10px' }} href={item.url}>
                 {item.title}
               </a>
-              <small style={{ display: 'block' }}>{new Date(item.created_at).toLocaleString()}</small>
+              <small style={{ display: 'block' }}>
+                {new Date(item.created_at).toLocaleString()}
+              </small>
             </p>
           </Fragment>
         ))}
-    </div>
+    </Layout>
   );
 }
 
-export default Experiments;
+export default useEffectPage;

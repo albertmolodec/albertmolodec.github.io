@@ -11,7 +11,7 @@ function ProjectsPage({ location }) {
         keywords={[`личный блог`, `gatsby`, `albertmolodec`, `react`]}
       />
       <p>Проекты</p>
-      <Link to="/projects/experiments">Эксперименты</Link>
+      <Link to="/projects/useEffect">Эксперименты с useEffect</Link>
     </Layout>
   );
 }
