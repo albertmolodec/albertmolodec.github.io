@@ -24,6 +24,7 @@ function Footer() {
             Twitter
             Instagram
             Facebook
+            LinkedIn
             Moikrug
           }
         }
