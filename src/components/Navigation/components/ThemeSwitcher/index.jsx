@@ -15,6 +15,7 @@ function ThemeSwitcher() {
         type="checkbox"
         checked={darkMode}
         onChange={() => setDarkMode(!darkMode)}
+        aria-label="Сменить тему"
       />
       <Img className="check__image" />
     </label>
