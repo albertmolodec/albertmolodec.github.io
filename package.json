@@ -67,7 +67,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\"",
     "gh-pages": "gh-pages -d public -b master",
-    "deploy": "gatsby build && npm set-cname && gh-pages -d public -b master",
+    "deploy": "gatsby build && npm run set-cname && gh-pages -d public -b master",
     "set-cname": "echo albertmolodec.js.org > ./public/CNAME"
   },
   "license": "MIT",
