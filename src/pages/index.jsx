@@ -3,7 +3,8 @@ import React from 'react';
 import Layout from '~src/layouts/Layout';
 import SEO from '~src/components/SEO';
 
-import avatar from '~src/assets/images/low-poly-avatar.webp';
+import avatarWebp from '~src/assets/images/low-poly-avatar.webp';
+import avatarPng from '~src/assets/images/low-poly-avatar.png';
 
 import './styles.css';
 
@@ -28,11 +29,15 @@ const IndexPage = () => (
         </p>
         <p>Родился в Чусовом, живу в Перми и люблю путешествовать.</p>
       </div>
-      <img
-        className="image"
-        src={avatar}
-        alt="Мой низкополигональный портрет"
-      />
+      <picture>
+        <source type="image/webp" srcSet={avatarWebp} />
+        <source type="image/jpeg" srcSet={avatarPng} />
+        <img
+          src={avatarPng}
+          className="image"
+          alt="Мой низкополигональный портрет"
+        />
+      </picture>
     </div>
   </Layout>
 );
