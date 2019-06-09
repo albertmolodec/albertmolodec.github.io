@@ -99,6 +99,12 @@ module.exports = {
         icon: `static/favicon.png`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        devMode: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-svgr',
     `gatsby-plugin-catch-links`,

@@ -1,7 +1,6 @@
 import React from 'react';
 import useWindowWidth from '~src/hooks/useWindowWidth';
 import NavLink from '~src/ui/NavLink';
-import themeSwitcherSvg from '~src/assets/images/theme-switcher.svg';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import TABS from './TABS';
 
@@ -19,7 +18,7 @@ function Navigation() {
           </li>
         ))}
       </ul>
-      <ThemeSwitcher />
+      {typeof window !== `undefined` && <ThemeSwitcher />}
     </div>
   );
 }

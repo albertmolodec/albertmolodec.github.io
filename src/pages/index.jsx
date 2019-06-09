@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '~src/layouts/Layout';
 import SEO from '~src/components/SEO';
 
-import avatar from '~src/assets/images/low-poly-avatar-hd.png';
+import avatar from '~src/assets/images/low-poly-avatar.webp';
 
 import './styles.css';
 
