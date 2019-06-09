@@ -2,10 +2,6 @@ html {
   font-family: PermianSansTypeface, system-ui, -apple-system, sans-serif;
 }
 
-.anchor {
-  box-shadow: none;
-}
-
 a {
   color: var(--primary-color);
 }
@@ -14,19 +10,37 @@ p {
   margin: 0.5em 0;
 }
 
-p code {
-  font-size: 1.1rem;
-}
-
-li code {
-  font-size: 1rem;
-}
-
-:focus {
+a:focus {
   outline: thin dotted;
 }
 
 /**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  * Based on copypasta from Remy Bach and Sarah Drasner
  */
 code[class*='language-'],
@@ -82,6 +96,14 @@ pre[class*='language-'] ::selection {
   text-shadow: none;
 
   background: hsla(0, 0%, 100%, 0.15);
+}
+
+p code {
+  font-size: 1.1rem;
+}
+
+li code {
+  font-size: 1rem;
 }
 
 /* Inline code */

@@ -22,18 +22,16 @@ body {
   color: var(--primary-color);
 
   font-size: var(--font-size);
+
+  background-color: var(--background-color);
+
   @media (max-width: 48rem) {
     font-size: 0.875rem;
   }
 
-  background-color: var(--background-color);
-}
-
-/* Color Theme */
-
-body.light {
-  --primary-color: var(--dark-blue);
-  --background-color: var(--light-grey);
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
+  transition-property: background-color, color, fill;
 }
 
 body.dark {

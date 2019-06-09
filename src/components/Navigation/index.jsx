@@ -1,8 +1,8 @@
 import React from 'react';
 import useWindowWidth from '~src/hooks/useWindowWidth';
 import NavLink from '~src/ui/NavLink';
-import Button from '~src/ui/Button';
 import themeSwitcherSvg from '~src/assets/images/theme-switcher.svg';
+import ThemeSwitcher from './components/ThemeSwitcher';
 import TABS from './TABS';
 
 import './styles.css';
@@ -19,9 +19,7 @@ function Navigation() {
           </li>
         ))}
       </ul>
-      <Button>
-        <img src={themeSwitcherSvg} alt="Изменить тему" />
-      </Button>
+      <ThemeSwitcher />
     </div>
   );
 }
