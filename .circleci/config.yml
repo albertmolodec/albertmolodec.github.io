@@ -15,8 +15,10 @@ jobs:
       - checkout
 
       - run:
-          name: Re-compiling sharp
-          command: npm rebuild sharp --update-binary
+          name: Reinstall sharp and others
+          command: |
+            rm -rvf node_modules
+            npm install
 
       - restore_cache:
           keys:
