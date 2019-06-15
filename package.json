@@ -69,8 +69,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\"",
     "set-cname": "echo albertmolodec.js.org > ./public/CNAME",
+    "set-circleci-config": "mkdir ./public/.circleci && cp ./.circleci/config.yml ./public/.circleci/config.yml",
     "gh-pages": "gh-pages -d public -b master",
-    "deploy": "gatsby build && npm run set-cname && mkdir ./public/.circleci && cp ./.circleci/config.yml ./public/.circleci/config.yml && npm run gh-pages"
+    "deploy": "gatsby build && npm run set-cname && npm run set-circleci-config && npm run gh-pages"
   },
   "license": "MIT",
   "repository": {

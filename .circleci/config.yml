@@ -33,6 +33,4 @@ jobs:
       # - run: yarn test
 
       - run:
-        command: |
-          echo ${CIRCLE_BRANCH}
-          echo ${GH_TOKEN}
+          command: echo ${CIRCLE_BRANCH}
