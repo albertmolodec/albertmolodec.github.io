@@ -40,4 +40,9 @@ jobs:
 
       - deploy:
           name: Deploy to Github Pages
-          command: npm run deploy
+          command: |
+            echo -e "Starting to deploy to Github Pages\n"
+            cd ~/website
+            git config --global user.email "albert.abdu@gmail.com"
+            git config --global user.name "Альберт Абдульманов"
+            npm run deploy
