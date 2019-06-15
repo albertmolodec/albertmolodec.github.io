@@ -1,24 +1,14 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.16.0
+      - image: circleci/node:10.13.0
     working_directory: ~/repo
     environment:
       BRANCH: master
       TARGET_REPO: albertmolodec/albertmolodec.github.io.git
     steps:
       - checkout
-
-      - run:
-          name: Reinstall sharp and others
-          command: |
-            rm -rvf node_modules
-            npm install
 
       - restore_cache:
           keys:
