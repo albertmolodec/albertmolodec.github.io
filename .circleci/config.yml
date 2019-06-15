@@ -22,10 +22,10 @@ jobs:
             - v1-dependencies-
 
       - run:
-          command: echo "CIRCLE_BRANCH: ${CIRCLE_BRANCH}"
+          command: echo "CIRCLE_BRANCH ${CIRCLE_BRANCH}"
 
       - run:
-          command: echo "GH_TOKEN: ${GH_TOKEN}"
+          command: echo "GH_TOKEN ${GH_TOKEN}"
 
       - run:
           name: Setup Dependencies
@@ -37,4 +37,3 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       # run tests!
       # - run: yarn test
-
