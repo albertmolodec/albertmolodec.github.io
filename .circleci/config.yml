@@ -38,11 +38,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
+
       # run tests!
       # - run: yarn test
+
       - deploy:
           name: Deploy to Github Pages
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              npm run deploy
-            fi
+          command: npm run deploy
