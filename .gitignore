@@ -54,6 +54,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# Credentials
+credentials.json
+
 # gatsby files
 .cache/
 public

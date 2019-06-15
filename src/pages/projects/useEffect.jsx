@@ -40,18 +40,31 @@ function useEffectPage({ location }) {
       />
       {data && <h3>{data.nbHits} результатов</h3>}
       {data &&
-        data.hits.map(item => (
-          <Fragment key={item.created_at}>
-            <p>
-              <a style={{ marginTop: '10px' }} href={item.url}>
-                {item.title}
-              </a>
+        data.hits
+          .filter(hit => hit.title)
+          .map(item => (
+            <Fragment key={item.created_at}>
+              <h2 style={{ marginTop: '1.5em' }}>
+                <a href={item.url}>{item.title}</a>
+              </h2>
+              {item.story_text && (
+                <p
+                  style={{
+                    textOverflow: 'ellipsis',
+                    overflow: 'hidden',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                  }}
+                >
+                  {item.story_text}
+                </p>
+              )}
               <small style={{ display: 'block' }}>
                 {new Date(item.created_at).toLocaleString()}
               </small>
-            </p>
-          </Fragment>
-        ))}
+            </Fragment>
+          ))}
     </Layout>
   );
 }

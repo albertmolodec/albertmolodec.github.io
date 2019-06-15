@@ -104,6 +104,14 @@ module.exports = {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {},
     },
+    {
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+        spreadsheetId: '1hIMDrDbMZTWb-ZK8Eg4UsFgqLK_mILoY-D8SvimJ82c',
+        worksheetTitle: 'Eng',
+        credentials: require('./credentials.json'),
+      },
+    },
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-svgr',
     `gatsby-plugin-catch-links`,

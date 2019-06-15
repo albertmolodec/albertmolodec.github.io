@@ -10,6 +10,8 @@
   font-family: 'PermianSansTypeface';
   font-style: italic;
   src: url('../assets/fonts/PermianSansTypeface-Italic.woff2') format('woff2');
+
+  font-display: swap;
 }
 
 @font-face {

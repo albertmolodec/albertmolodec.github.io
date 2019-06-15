@@ -26,6 +26,7 @@
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-source-google-sheets": "^1.1.1",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
     "prismjs": "^1.16.0",
@@ -35,6 +36,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
