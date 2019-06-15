@@ -107,8 +107,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-google-sheets',
       options: {
-        spreadsheetId: '1hIMDrDbMZTWb-ZK8Eg4UsFgqLK_mILoY-D8SvimJ82c',
-        worksheetTitle: 'Eng',
+        spreadsheetId: '1-O2ZpXMRqKgarXVoK27MptqneqK8tWUBw13oCLDmBHA',
+        worksheetTitle: 'ExampleSheet',
+        // eslint-disable-next-line global-require
         credentials: require('./credentials.json'),
       },
     },

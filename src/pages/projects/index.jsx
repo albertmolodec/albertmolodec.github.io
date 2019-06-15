@@ -5,19 +5,16 @@ import SEO from '~src/components/SEO';
 
 function ProjectsPage({ location }) {
   const {
-    allFile: { nodes },
+    allSitePage: { edges },
   } = useStaticQuery(
     graphql`
       query {
-        allFile(
-          filter: {
-            relativeDirectory: { eq: "projects" }
-            name: { ne: "index" }
-          }
-        ) {
-          nodes {
-            name
-            id
+        allSitePage(filter: {path: {regex: "/^\/projects\/\\w/"}}) {
+          edges {
+            node {
+              path
+              id
+            }
           }
         }
       }
@@ -32,10 +29,10 @@ function ProjectsPage({ location }) {
       />
       <h1>Проекты</h1>
       <ol style={{ listStyle: 'decimal', marginLeft: '1em' }}>
-        {nodes.map(node => {
+        {edges.map(edge => {
           return (
-            <li key={`id-${node.id}`}>
-              <Link to={`/projects/${node.name}`}>{node.name}</Link>
+            <li key={`id-${edge.node.id}`}>
+              <Link to={`${edge.node.path}`}>{edge.node.path}</Link>
             </li>
           );
         })}
