@@ -1,24 +1,34 @@
+const buildCredentials = require('./config/buildGoogleDriveAPICredentials');
+const config = require('./config/website');
+
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
-    title: 'AlbertMolodec',
-    author: 'Альберт Абдульманов',
-    description: 'Пишу код и тексты',
-    viewport:
-      'width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no',
-    siteUrl: 'https://albertmolodec.github.io/',
-    social: {
-      Email: 'mailto:albert.abdu@gmail.com',
-      Github: 'https://github.com/albertmolodec',
-      Codepen: 'https://codepen.io/albertmolodec/',
-      Twitter: 'https://twitter.com/albertmolodec',
-      Instagram: 'https://instagram.com/albertmolodec',
-      Facebook: 'https://www.facebook.com/profile.php?id=100001486167096',
-      LinkedIn: 'https://www.linkedin.com/in/albert-abdulmanov-5b94a316b/',
-      Moikrug: 'https://moikrug.ru/albertmolodec',
-    },
+    title: config.meta.title,
+    shortTitle: config.meta.shortTitle,
+    author: config.meta.author,
+    description: config.meta.description,
+    viewport: config.meta.viewport,
+    siteUrl: config.meta.siteUrl,
+    social: config.social,
   },
   pathPrefix: '/',
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: config.meta.title,
+        short_name: config.meta.shortTitle,
+        description: config.meta.description,
+        lang: 'ru-RU',
+        start_url: `/`,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: `minimal-ui`,
+        icon: `static/social/avatar.png`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -87,19 +97,6 @@ module.exports = {
         useAmpClientIdApi: true,
       },
     },
-    `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Сайт Альберта Абдульманова`,
-        short_name: `Albert`,
-        start_url: `/`,
-        background_color: `#F5F5F5`,
-        theme_color: `#364F6B`,
-        display: `minimal-ui`,
-        icon: `static/favicon.png`,
-      },
-    },
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {},
@@ -109,8 +106,7 @@ module.exports = {
       options: {
         spreadsheetId: '1-O2ZpXMRqKgarXVoK27MptqneqK8tWUBw13oCLDmBHA',
         worksheetTitle: 'ExampleSheet',
-        // eslint-disable-next-line global-require
-        credentials: require('./credentials.json'),
+        credentials: buildCredentials(process.env),
       },
     },
     `gatsby-plugin-react-helmet`,

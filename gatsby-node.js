@@ -1,3 +1,3 @@
-exports.createPages = require('./gatsby/createPages');
-exports.onCreateNode = require('./gatsby/onCreateNode');
-exports.onCreateWebpackConfig = require('./gatsby/onCreateWebpackConfig');
+exports.createPages = require('./config/gatsby/createPages');
+exports.onCreateNode = require('./config/gatsby/onCreateNode');
+exports.onCreateWebpackConfig = require('./config/gatsby/onCreateWebpackConfig');

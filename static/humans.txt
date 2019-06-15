@@ -1,0 +1,10 @@
+/* TEAM */
+
+Creator: AlbertMolodec
+URL: https://albertmolodec.js.org
+Description: I'm frontend developer and just good guy.
+
+/* SITE */
+
+Standards: HTML5, CSS
+Components: Gatsby

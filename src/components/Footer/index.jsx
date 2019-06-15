@@ -1,14 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Link from '~src/ui/Link';
-import useBuildTime from '~src/hooks/useBuildTime';
 import helloSvg from '~src/assets/images/hello.svg';
 
 import './styles.css';
 
 function Footer() {
-  const buildTime = useBuildTime();
-
   const {
     site: {
       siteMetadata: { social: socialLinks },
@@ -18,14 +15,14 @@ function Footer() {
       site {
         siteMetadata {
           social {
-            Email
-            Github
-            Codepen
-            Twitter
-            Instagram
-            Facebook
-            LinkedIn
-            Moikrug
+            email
+            github
+            codepen
+            twitter
+            instagram
+            facebook
+            linkedin
+            moikrug
           }
         }
       }
@@ -44,7 +41,6 @@ function Footer() {
           );
         })}
       </ul>
-      {/* <small>Последняя сборка: {buildTime}</small> */}
     </div>
   );
 }
