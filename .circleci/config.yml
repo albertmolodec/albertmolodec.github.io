@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.13.0
-    working_directory: ~/repo
+    working_directory: ~/website
     environment:
       BRANCH: master
       TARGET_REPO: albertmolodec/albertmolodec.github.io.git
