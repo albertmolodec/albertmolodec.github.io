@@ -20,7 +20,7 @@ jobs:
             - v1-dependencies-
 
       - run:
-          name: Log info
+          name: Log env variables
           command: |
             echo "CIRCLE_BRANCH ${CIRCLE_BRANCH}"
             echo "GH_TOKEN ${GH_TOKEN}"
@@ -40,3 +40,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       # run tests!
       # - run: yarn test
+      - deploy:
+          name: Deploy to Github Pages
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              npm run deploy
+            fi
