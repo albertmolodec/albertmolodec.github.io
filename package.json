@@ -68,9 +68,9 @@
     "lint": "npm run lint:js && npm run lint:css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\"",
+    "set-cname": "echo albertmolodec.js.org > ./public/CNAME",
     "gh-pages": "gh-pages -d public -b master",
-    "deploy": "gatsby build && npm run set-cname && gh-pages -d public -b master",
-    "set-cname": "echo albertmolodec.js.org > ./public/CNAME"
+    "deploy": "gatsby build && npm run set-cname && npm run gh-pages"
   },
   "license": "MIT",
   "repository": {
