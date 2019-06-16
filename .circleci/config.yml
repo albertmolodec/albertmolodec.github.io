@@ -75,7 +75,9 @@ jobs:
       - <<: *build
   test:
     executor: node
+    working_directory: ~/website
     steps:
+      - checkout
       - <<: *test
   deploy_gh_pages:
     executor: node
@@ -91,13 +93,13 @@ workflows:
   version: 2
   main:
     jobs:
-      - test
       - build:
           filters:
             branches:
               only: source
               ignore:
                 - master
+      - test
       - deploy_gh_pages:
           requires:
             - build
