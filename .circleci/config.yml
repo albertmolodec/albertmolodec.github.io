@@ -19,17 +19,6 @@ jobs:
             - v1-dependencies-
 
       - run:
-          name: Log env variables
-          command: |
-            echo "CIRCLE_BRANCH ${CIRCLE_BRANCH}"
-            echo "GH_TOKEN ${GH_TOKEN}"
-            echo "GOOGLE_PRIVATE_KEY ${GOOGLE_PRIVATE_KEY}"
-            echo "GOOGLE_PRIVATE_KEY_ID ${GOOGLE_PRIVATE_KEY_ID}"
-            echo "GOOGLE_PROJECT_ID ${GOOGLE_PROJECT_ID}"
-            echo "GOOGLE_CLIENT_ID ${GOOGLE_CLIENT_ID}"
-            echo "GOOGLE_DRIVE_NAME ${GOOGLE_DRIVE_NAME}"
-
-      - run:
           name: Setup Dependencies
           command: npm install
 
@@ -51,3 +40,13 @@ jobs:
             npm run build
             npm run set-cname
             ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
+
+# We don't need to start job if branch is not the source
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: source

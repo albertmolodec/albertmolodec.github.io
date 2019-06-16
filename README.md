@@ -10,6 +10,7 @@
 - [x] ESLint, Prettier, Stylelint
 - [ ] RSS
 - [x] Вывод размера бандла при каждой сборке
+- [x] CI/CD (CircleCI)
 - [ ] И другие инструменты
 - [ ] ...
 
