@@ -35,7 +35,7 @@ aliases:
         ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
 
   test: &test
-    test:
+    run:
       name: Testing
       command: npm run test
 
