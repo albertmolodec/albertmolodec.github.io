@@ -28,12 +28,14 @@ aliases:
     run:
       name: Deploy to Github Pages
       command: |
-        echo -e "Starting to deploy to Github Pages. Working directory ${CIRCLE_WORKING_DIRECTORY}\n"
-        ls -l
-        git config --global user.email ${GIT_EMAIL}
-        git config --global user.name ${GIT_NAME}
-        echo albertmolodec.js.org > ./public/CNAME
-        ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
+        if [ "${CIRCLE_BRANCH}" == "source" ]; then
+          echo -e "Starting to deploy to Github Pages. Working directory ${CIRCLE_WORKING_DIRECTORY}\n"
+          ls -l
+          git config --global user.email ${GIT_EMAIL}
+          git config --global user.name ${GIT_NAME}
+          echo albertmolodec.js.org > ./public/CNAME
+          ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
+        fi
 
   test: &test
     run:
