@@ -35,16 +35,4 @@ jobs:
             git config --global user.name "Альберт Абдульманов"
             npm run build
             npm run set-cname
-            mkdir -p ./public/.circleci
-            cp ./.circleci/config.yml ./public/.circleci/config.yml
             ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
-
-# We don't need to start job if branch is not the source
-workflows:
-  version: 2
-  main:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only: source
