@@ -1,5 +1,3 @@
-version: 2.1
-
 executors:
   node:
     parameters:
@@ -10,45 +8,6 @@ executors:
       - image: circleci/node:<< parameters.image >>
         environment:
           TERM: xterm
-
-jobs:
-  build:
-    executer: node
-    working_directory: ~/website
-    steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *save_cache
-      - <<: *build
-  deploy_gh_pages:
-    executer: node
-    working_directory: ~/website
-    # parameters:
-    #   GIT_EMAIL: "albert.abdu@gmail.com"
-    #   GIT_NAME: "Альберт Абдульманов"
-    environment:
-      TARGET_REPO: albertmolodec/albertmolodec.github.io.git
-    steps:
-      - <<: *deploy_gh_pages
-
-workflows:
-  version: 2
-  main:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only: source
-              ignore: 
-                - master
-      - deploy_gh_pages:
-          requires: 
-            - build
-          filters:
-            branches:
-              only: source
-              ignore: master
 
 aliases:
   install_node_modules: &install_node_modules
@@ -93,3 +52,44 @@ aliases:
   store_results_artifacts: &store_results_artifacts
     store_artifacts:
       path: results
+
+version: 2.1
+
+jobs:
+  build:
+    executer: node
+    working_directory: ~/website
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - <<: *build
+  deploy_gh_pages:
+    executer: node
+    working_directory: ~/website
+    # parameters:
+    #   GIT_EMAIL: "albert.abdu@gmail.com"
+    #   GIT_NAME: "Альберт Абдульманов"
+    environment:
+      TARGET_REPO: albertmolodec/albertmolodec.github.io.git
+    steps:
+      - <<: *deploy_gh_pages
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: source
+              ignore:
+                - master
+      - deploy_gh_pages:
+          requires:
+            - build
+          filters:
+            branches:
+              only: source
+              ignore: master
