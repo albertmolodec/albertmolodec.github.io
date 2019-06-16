@@ -18,18 +18,26 @@ aliases:
   build: &build
     run:
       name: Build Gatsby Site
-      command: npm run build
+      command: |
+        echo -e "Working directory ${CIRCLE_WORKING_DIRECTORY}\n"
+        ls -l
+        npm run build
 
   deploy_gh_pages: &deploy_gh_pages
     deploy:
       name: Deploy to Github Pages
       command: |
-        echo -e "Starting to deploy to Github Pages\n"
-        cd ~/website
-        git config --global user.email "albert.abdu@gmail.com"
-        git config --global user.name "Альберт Абдульманов"
-        npm run set-cname
+        echo -e "Starting to deploy to Github Pages. Working directory ${CIRCLE_WORKING_DIRECTORY}\n"
+        ls -l
+        git config --global user.email ${GIT_EMAIL}
+        git config --global user.name ${GIT_NAME}
+        echo albertmolodec.js.org > ./public/CNAME
         ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
+
+  test: &test
+    test:
+      name: Testing
+      command: npm run test
 
   restore_cache: &restore_cache
     restore_cache:
@@ -68,11 +76,10 @@ jobs:
   deploy_gh_pages:
     executor: node
     working_directory: ~/website
-    # parameters:
-    #   GIT_EMAIL: "albert.abdu@gmail.com"
-    #   GIT_NAME: "Альберт Абдульманов"
     environment:
       TARGET_REPO: albertmolodec/albertmolodec.github.io.git
+      GIT_EMAIL: 'albert.abdu@gmail.com'
+      GIT_NAME: 'Альберт Абдульманов'
     steps:
       - <<: *deploy_gh_pages
 
@@ -80,6 +87,7 @@ workflows:
   version: 2
   main:
     jobs:
+      - test
       - build:
           filters:
             branches:

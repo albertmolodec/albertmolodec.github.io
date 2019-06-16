@@ -66,12 +66,8 @@
     "lint:js": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:css": "./node_modules/.bin/stylelint src/**/*.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\"",
-    "set-cname": "echo albertmolodec.js.org > ./public/CNAME",
-    "set-circleci-config": "mkdir ./public/.circleci && cp ./.circleci/config.yml ./public/.circleci/config.yml",
-    "gh-pages": "gh-pages -d public -b master",
-    "deploy": "gatsby build && npm run set-cname && npm run set-circleci-config && npm run gh-pages"
+    "test": "echo \"No test specified\"",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\""
   },
   "license": "MIT",
   "repository": {
