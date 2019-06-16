@@ -74,6 +74,7 @@ jobs:
       - <<: *save_cache
       - <<: *build
   test:
+    executor: test
     steps:
       - <<: *test
   deploy_gh_pages:
