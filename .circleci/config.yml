@@ -87,6 +87,7 @@ jobs:
       GIT_EMAIL: 'albert.abdu@gmail.com'
       GIT_NAME: 'Альберт Абдульманов'
     steps:
+      - checkout
       - <<: *deploy_gh_pages
 
 workflows:
