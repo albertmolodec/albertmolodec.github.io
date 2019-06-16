@@ -45,4 +45,6 @@ jobs:
             cd ~/website
             git config --global user.email "albert.abdu@gmail.com"
             git config --global user.name "Альберт Абдульманов"
-            npm run deploy
+            npm run build
+            npm run set-cname
+            ./node_modules/.bin/gh-pages -d public -b gh-pages -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
