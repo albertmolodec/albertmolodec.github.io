@@ -47,4 +47,4 @@ jobs:
             git config --global user.name "Альберт Абдульманов"
             npm run build
             npm run set-cname
-            ./node_modules/.bin/gh-pages -d public -b gh-pages -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
+            ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
