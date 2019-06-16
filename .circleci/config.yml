@@ -7,9 +7,6 @@ jobs:
     environment:
       BRANCH: master
       TARGET_REPO: albertmolodec/albertmolodec.github.io.git
-    branches:
-      only:
-        - source
     steps:
       - checkout
 
