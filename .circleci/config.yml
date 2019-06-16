@@ -1,13 +1,8 @@
+version: 2.1
 executors:
   node:
-    parameters:
-      image:
-        type: string
-        default: 'lts'
     docker:
-      - image: circleci/node:<< parameters.image >>
-        environment:
-          TERM: xterm
+      - image: circleci/node:lts
 
 aliases:
   install_node_modules: &install_node_modules
@@ -18,19 +13,14 @@ aliases:
   build: &build
     run:
       name: Build Gatsby Site
-      command: |
-        echo -e "Working directory ${CIRCLE_WORKING_DIRECTORY}\n"
-        ls -l
-        npm run build
-        ls -l
+      command: npm run build
 
   deploy_gh_pages: &deploy_gh_pages
-    run:
+    deploy:
       name: Deploy to Github Pages
       command: |
         if [ "${CIRCLE_BRANCH}" == "source" ]; then
           echo -e "Starting to deploy to Github Pages. Working directory ${CIRCLE_WORKING_DIRECTORY}\n"
-          ls -l
           git config --global user.email ${GIT_EMAIL}
           git config --global user.name ${GIT_NAME}
           echo albertmolodec.js.org > ./public/CNAME
@@ -64,25 +54,8 @@ aliases:
     store_artifacts:
       path: results
 
-version: 2.1
-
 jobs:
-  build:
-    executor: node
-    working_directory: ~/website
-    steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *save_cache
-      - <<: *build
-  test:
-    executor: node
-    working_directory: ~/website
-    steps:
-      - checkout
-      - <<: *test
-  deploy_gh_pages:
+  build_and_deploy:
     executor: node
     working_directory: ~/website
     environment:
@@ -91,23 +64,27 @@ jobs:
       GIT_NAME: 'Альберт Абдульманов'
     steps:
       - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - <<: *build
       - <<: *deploy_gh_pages
+
+  test:
+    executor: node
+    working_directory: ~/website
+    steps:
+      - checkout
+      - <<: *test
 
 workflows:
   version: 2
   main:
     jobs:
-      - build:
+      - build_and_deploy:
           filters:
             branches:
               only: source
               ignore:
                 - master
       - test
-      - deploy_gh_pages:
-          requires:
-            - build
-          filters:
-            branches:
-              only: source
-              ignore: master
