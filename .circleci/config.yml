@@ -129,7 +129,7 @@ workflows:
       - deploy:
           requires:
             - build
-      - test
+      - test:
           filters:
             branches:
               only: source
