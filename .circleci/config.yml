@@ -67,6 +67,7 @@ aliases:
       root: .
       paths:
         - package-lock.json
+        - public
         - .circleci
   
   attach_workspace: &attach_workspace
@@ -107,7 +108,6 @@ jobs:
       GIT_NAME: 'Альберт Абдульманов'
     steps:
       - <<: *attach_workspace
-      - <<: *restore_cache
       - <<: *deploy_gh_pages
 
   test:
