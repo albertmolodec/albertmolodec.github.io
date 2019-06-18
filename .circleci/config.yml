@@ -45,17 +45,42 @@ aliases:
       key: v1-dependencies-{{ checksum "package-lock.json" }}
       paths:
         - node_modules
-
-  store_results: &store_results
+        
+  persist_to_workspace: &persist_to_workspace
+    persist_to_workspace:
+      name: Persist build to be used by another job in the workflow (deploy)
+      root: .
+      paths:
+        - public
+  
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      name: Attach build for deploying
+      at: .
+  
+  # not used yed
+  store_test_results: &store_test_results
     store_test_results:
       path: results
 
-  store_results_artifacts: &store_results_artifacts
+  store_artifacts: &store_artifacts
     store_artifacts:
       path: results
 
 jobs:
-  build_and_deploy:
+  build:
+    executor: node
+    working_directory: ~/website
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - <<: *build
+      - <<: *store_artifacts
+      - <<: *persist_to_workspace
+  
+  deploy_gh_pages:
     executor: node
     working_directory: ~/website
     environment:
@@ -63,11 +88,7 @@ jobs:
       GIT_EMAIL: 'albert.abdu@gmail.com'
       GIT_NAME: 'Альберт Абдульманов'
     steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *save_cache
-      - <<: *build
+      - <<: *attach_workspace
       - <<: *deploy_gh_pages
 
   test:
@@ -81,10 +102,11 @@ workflows:
   version: 2
   main:
     jobs:
-      - build_and_deploy:
+      - build:
           filters:
             branches:
               only: source
-              ignore:
-                - master
+      - deploy_gh_pages
+          requires:
+            - build
       - test
