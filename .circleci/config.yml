@@ -51,6 +51,7 @@ aliases:
       name: Persist build to be used by deploy
       root: .
       paths:
+        - package-lock.json
         - public
   
   attach_workspace: &attach_workspace
