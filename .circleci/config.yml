@@ -106,7 +106,7 @@ workflows:
           filters:
             branches:
               only: source
-      - deploy_gh_pages
+      - deploy_gh_pages:
           requires:
             - build
       - test
