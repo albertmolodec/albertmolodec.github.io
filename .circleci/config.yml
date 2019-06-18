@@ -99,6 +99,7 @@ jobs:
     executor: node
     working_directory: ~/website
     steps:
+      - checkout
       - <<: *test
 
 workflows:
