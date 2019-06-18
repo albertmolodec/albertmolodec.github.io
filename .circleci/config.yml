@@ -56,7 +56,7 @@ aliases:
   attach_workspace: &attach_workspace
     attach_workspace:
       name: Attach build for deploying
-      at: .
+      at: ~/website
   
   # not used yed
   store_test_results: &store_test_results
@@ -77,8 +77,10 @@ jobs:
       - <<: *install_node_modules
       - <<: *save_cache
       - <<: *build
+      - run: ls -l
       - <<: *store_artifacts
       - <<: *persist_to_workspace
+      - run: ls -l
   
   deploy_gh_pages:
     executor: node
@@ -88,8 +90,11 @@ jobs:
       GIT_EMAIL: 'albert.abdu@gmail.com'
       GIT_NAME: 'Альберт Абдульманов'
     steps:
+      - run: ls -l
       - <<: *attach_workspace
+      - run: ls -l
       - <<: *deploy_gh_pages
+      - run: ls -l
 
   test:
     executor: node
