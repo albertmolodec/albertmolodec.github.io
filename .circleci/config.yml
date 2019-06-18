@@ -22,9 +22,9 @@ aliases:
       command: |
         if [ "${CIRCLE_BRANCH}" == "${SOURCE_BRANCH}" ]; then
           echo -e "Starting to deploy to Github Pages.\nWorking directory ${CIRCLE_WORKING_DIRECTORY}\nCurrent branch ${CIRCLE_BRANCH}"
+          
           git config --global user.email ${GIT_EMAIL}
           git config --global user.name ${GIT_NAME}
-          
           git clone https://${GH_TOKEN}@github.com/${TARGET_REPO} out
           cd out
           git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
@@ -38,8 +38,9 @@ aliases:
 
           git add -A
           git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
-
           git push origin $TARGET_BRANCH
+
+          echo -e "\n\n\nPUBLISHED to ${TARGET_BRANCH}"
         fi
 
   test: &test
@@ -129,3 +130,6 @@ workflows:
           requires:
             - build
       - test
+          filters:
+            branches:
+              only: source
