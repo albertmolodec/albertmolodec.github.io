@@ -92,8 +92,8 @@ jobs:
       GIT_NAME: 'Альберт Абдульманов'
     steps:
       - run: ls -l
-      - <<: *restore_cache
       - <<: *attach_workspace
+      - <<: *restore_cache
       - run: ls -l
       - <<: *deploy_gh_pages
       - run: ls -l
