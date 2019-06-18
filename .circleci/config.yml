@@ -48,7 +48,7 @@ aliases:
         
   persist_to_workspace: &persist_to_workspace
     persist_to_workspace:
-      name: Persist build to be used by another job in the workflow (deploy)
+      name: Persist build to be used by deploy
       root: .
       paths:
         - public
@@ -82,7 +82,7 @@ jobs:
       - <<: *persist_to_workspace
       - run: ls -l
   
-  deploy_gh_pages:
+  deploy:
     executor: node
     working_directory: ~/website
     environment:
@@ -91,6 +91,7 @@ jobs:
       GIT_NAME: 'Альберт Абдульманов'
     steps:
       - run: ls -l
+      - <<: *restore_cache
       - <<: *attach_workspace
       - run: ls -l
       - <<: *deploy_gh_pages
@@ -111,7 +112,7 @@ workflows:
           filters:
             branches:
               only: source
-      - deploy_gh_pages:
+      - deploy:
           requires:
             - build
       - test
