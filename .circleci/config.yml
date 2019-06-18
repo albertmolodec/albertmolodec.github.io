@@ -24,6 +24,7 @@ aliases:
           git config --global user.email ${GIT_EMAIL}
           git config --global user.name ${GIT_NAME}
           echo albertmolodec.js.org > ./public/CNAME
+          rsync -av .circleci public
           ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
         fi
 
@@ -53,6 +54,7 @@ aliases:
       paths:
         - package-lock.json
         - public
+        - .circleci
   
   attach_workspace: &attach_workspace
     attach_workspace:
@@ -78,10 +80,8 @@ jobs:
       - <<: *install_node_modules
       - <<: *save_cache
       - <<: *build
-      - run: ls -l
       - <<: *store_artifacts
       - <<: *persist_to_workspace
-      - run: ls -l
   
   deploy:
     executor: node
@@ -91,18 +91,14 @@ jobs:
       GIT_EMAIL: 'albert.abdu@gmail.com'
       GIT_NAME: 'Альберт Абдульманов'
     steps:
-      - run: ls -l
       - <<: *attach_workspace
       - <<: *restore_cache
-      - run: ls -l
       - <<: *deploy_gh_pages
-      - run: ls -l
 
   test:
     executor: node
     working_directory: ~/website
     steps:
-      - checkout
       - <<: *test
 
 workflows:
