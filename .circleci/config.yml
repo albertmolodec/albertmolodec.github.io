@@ -24,7 +24,7 @@ aliases:
           git config --global user.email ${GIT_EMAIL}
           git config --global user.name ${GIT_NAME}
           echo albertmolodec.js.org > ./public/CNAME
-          rsync -av .circleci public
+          cp -avr .circleci public
           ./node_modules/.bin/gh-pages -d public -b master -r https://${GH_TOKEN}@github.com/${TARGET_REPO}
         fi
 
