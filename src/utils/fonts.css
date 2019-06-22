@@ -1,38 +1,9 @@
 @font-face {
   font-weight: normal;
-  font-family: 'PermianSerifTypeface';
-  font-style: normal;
-  src: url('../assets/fonts/PermianSerifTypeface.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: normal;
   font-family: 'PermianSansTypeface';
   font-style: italic;
-  src: url('../assets/fonts/PermianSansTypeface-Italic.woff2') format('woff2');
-
   font-display: swap;
-}
-
-@font-face {
-  font-weight: normal;
-  font-family: 'PermianSlabSerifTypeface';
-  font-style: normal;
-  src: url('../assets/fonts/PermianSlabSerifTypeface.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: bold;
-  font-family: 'PermianSerifTypeface';
-  font-style: normal;
-  src: url('../assets/fonts/PermianSerifTypeface-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: normal;
-  font-family: 'PermianSerifTypeface';
-  font-style: italic;
-  src: url('../assets/fonts/PermianSerifTypeface-Italic.woff2') format('woff2');
+  src: url('../assets/fonts/PermianSansTypeface-Italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -40,22 +11,7 @@
   font-family: 'PermianSansTypeface';
   font-style: normal;
   src: url('../assets/fonts/PermianSansTypeface.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: normal;
-  font-family: 'PermianSlabSerifTypeface';
-  font-style: italic;
-  src: url('../assets/fonts/PermianSlabSerifTypeface-Italic.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-weight: bold;
-  font-family: 'PermianSlabSerifTypeface';
-  font-style: normal;
-  src: url('../assets/fonts/PermianSlabSerifTypeface-Bold.woff2')
-    format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -63,4 +19,5 @@
   font-family: 'PermianSansTypeface';
   font-style: normal;
   src: url('../assets/fonts/PermianSansTypeface-Bold.woff2') format('woff2');
+  font-display: swap;
 }
