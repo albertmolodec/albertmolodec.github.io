@@ -1,6 +1,6 @@
 # Мой сайт albertmolodec.js.org.
 
-[![CircleCI](https://circleci.com/gh/albertmolodec/albertmolodec.github.io.svg?style=svg)](https://circleci.com/gh/albertmolodec/albertmolodec.github.io)
+[![CircleCI](https://circleci.com/gh/albertmolodec/albertmolodec.github.io.svg?style=svg)](https://circleci.com/gh/albertmolodec/workflows/albertmolodec.github.io)
 
 Код, тексты, проекты... Вот это вот всё.
 
