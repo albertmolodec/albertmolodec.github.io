@@ -9,7 +9,7 @@
     "@mdx-js/react": "^1.0.20",
     "@svgr/webpack": "^4.3.0",
     "dayjs": "^1.8.14",
-    "gatsby": "^2.9.4",
+    "gatsby": "^2.11.6",
     "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-amp": "^0.2.2",
     "gatsby-plugin-catch-links": "^2.0.15",
