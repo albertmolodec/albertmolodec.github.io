@@ -1,5 +1,6 @@
 const path = require('path');
 
+// TODO: Сделать и для MDX-страниц. А лучше заменить на них
 module.exports = ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogPost = path.resolve(`./src/templates/blog-post.jsx`);
