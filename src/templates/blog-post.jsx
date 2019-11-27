@@ -17,7 +17,7 @@ function BlogPostTemplate({ pageContext, data }) {
         title={post.frontmatter.title}
         keywords={[`блог`, `gatsby`, `javascript`, `react`]}
       />
-      <p style={{ marginBottom: "20px" }}>Я еще не работал над типографикой, поэтому посты выглядят не очень. Когда-нибудь (скоро) ситуация станет лучше.</p>
+      <p style={{ marginBottom: "20px", fontWeight: "bold" }}>Я еще не работал над типографикой, поэтому посты выглядят не очень. Когда-нибудь (скоро) ситуация станет лучше.</p>
       <article className="article">
         <div className="content">
           <h1>{post.frontmatter.title}</h1>
