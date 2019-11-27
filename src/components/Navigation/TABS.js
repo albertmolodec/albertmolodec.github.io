@@ -7,14 +7,14 @@ const TABS = [
     name: 'Блог',
     link: '/blog/',
   },
-  {
-    name: 'Проекты',
-    link: '/projects/',
-  },
-  {
-    name: 'Списки',
-    link: '/lists/',
-  },
+//   {
+//     name: 'Проекты',
+//     link: '/projects/',
+//   },
+//   {
+//     name: 'Списки',
+//     link: '/lists/',
+//   },
 ];
 
 export default TABS;
