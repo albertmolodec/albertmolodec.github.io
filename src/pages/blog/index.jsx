@@ -30,25 +30,11 @@ function BlogIndex() {
             }
           }
         }
-        allMdx {
-          edges {
-            node {
-              frontmatter {
-                title
-              }
-              excerpt(pruneLength: 20)
-              fields {
-                slug
-              }
-            }
-          }
-        }
       }
     `,
   );
 
   const posts = allMarkdownRemark.edges;
-  const postsMDX = allMdx.edges;
 
   return (
     <Layout>
@@ -66,19 +52,6 @@ function BlogIndex() {
             <small>
               {node.frontmatter.date} • {formatReadingTime(node.timeToRead)}
             </small>
-            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          </div>
-        );
-      })}
-      
-      <h2 style={{ marginTop: '20px' }}>MDX test</h2>
-      {postsMDX.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return (
-          <div style={{ marginTop: '2rem' }} key={node.fields.slug}>
-            <h3>
-              <Link to={`/${node.fields.slug}`}>{title}</Link>
-            </h3>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         );
