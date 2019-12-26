@@ -1,19 +1,18 @@
-# Мой сайт albertmolodec.js.org.
+# My personal site
 
 [![CircleCI](https://circleci.com/gh/albertmolodec/albertmolodec.github.io.svg?style=svg)](https://circleci.com/gh/albertmolodec/workflows/albertmolodec.github.io)
 
-Код, тексты, проекты... Вот это вот всё.
+Code, texts, projects and so on.
 
-> :loudspeaker: В процессе разработки
+> :loudspeaker: In development.
 
-## Что внутри
+## Stack
 - [x] Gatsby
 - [x] React
 - [x] ESLint, Prettier, Stylelint
 - [ ] RSS
-- [x] Вывод размера бандла при каждой сборке
 - [x] CI/CD (CircleCI)
-- [ ] И другие инструменты
+- [x] CMS (Forestry)
 - [ ] ...
 
 ## Структура проекта
@@ -37,8 +36,8 @@
     ├── layouts
     ├── modules
     ├── pages 
-    ├── templates # Шаблоны для страниц блога
-    ├── ui # Расшариваемые компоненты: кнопки, инпуты, чекбоксы... 
+    ├── templates # Blog templates
+    ├── ui # Shared components
     └── utils
 └── static
     ├── favicon.png
@@ -58,13 +57,10 @@
 └── README.md
 ```
 
-Руководствуюсь этим чудесным [гайдом от Shivek Khurana](https://hackernoon.com/fractal-a-react-app-structure-for-infinite-scale-4dab943092af).
+## CMS
+
+Supported by [forestry](https://app.forestry.io/sites/z1mqjijkwvzhfa/#/)
 
 ***
 
-Использовал [Starter Gatsby Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
-Вдохновлялся [блогом Дэна Абрамова](https://overreacted.io/). Собирал [я](https://twitter.com/albert_molodec).
-
-## Рекомендации по именованию коммитов
-
-Эмодзи перечислены здесь: https://gitmoji.carloscuesta.me/
+Inspired by [Dan Abramov's **Overreacted**](https://overreacted.io/).
