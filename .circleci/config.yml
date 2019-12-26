@@ -52,13 +52,13 @@ aliases:
     restore_cache:
       name: Restore Package Cache
       keys:
-        - v1-dependencies-{{ checksum "package-lock.json" }}
+        - v1-dependencies-{{ checksum "yarn.lock" }}
         - v1-dependencies-
 
   save_cache: &save_cache
     save_cache:
       name: Save Package Cache
-      key: v1-dependencies-{{ checksum "package-lock.json" }}
+      key: v1-dependencies-{{ checksum "yarn.lock" }}
       paths:
         - node_modules
 
@@ -67,7 +67,7 @@ aliases:
       name: Persist build to be used by deploy
       root: .
       paths:
-        - package-lock.json
+        - yarn.lock
         - public
         - .circleci
 
