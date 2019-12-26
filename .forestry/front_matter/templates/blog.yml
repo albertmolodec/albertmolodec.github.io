@@ -9,3 +9,5 @@ fields:
 - type: datetime
   name: date
   label: date
+pages:
+- content/blog/what-a-wonderful-day.md
