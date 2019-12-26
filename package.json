@@ -1,7 +1,7 @@
 {
   "name": "albertmolodec.github.io",
-  "version": "1.1.0",
-  "description": "Source files for my personal site",
+  "version": "1.1.1",
+  "description": "My personal site",
   "author": "Albert Abdulmanov <albert.abdu@gmail.com>",
   "homepage": "https://github.com/albertmolodec/albertmolodec.github.io",
   "dependencies": {
@@ -62,7 +62,6 @@
     "lint:js": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:css": "./node_modules/.bin/stylelint src/**/*.css",
     "lint": "yarn lint:js && yarn lint:css",
-    "test": "echo \"No test specified\"",
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\""
   },
   "license": "MIT",
