@@ -109,6 +109,7 @@ module.exports = {
     //     credentials: buildCredentials(process.env),
     //   },
     // },
+    'gatsby-plugin-preact',
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-svgr',
     `gatsby-plugin-catch-links`,
