@@ -11,6 +11,7 @@
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:css": "stylelint src/**/*.css",
     "lint": "yarn lint:js && yarn lint:css",
+    "test": "echo 'test not found'",
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\""
   },
   "dependencies": {
