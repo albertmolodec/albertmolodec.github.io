@@ -31,7 +31,6 @@ const IndexPage = () => (
       </div>
       <picture>
         <source type="image/webp" srcSet={avatarWebp} />
-        <source type="image/jpeg" srcSet={avatarPng} />
         <img
           src={avatarPng}
           className="image"
