@@ -8,7 +8,7 @@ module.exports = {
   extends: ['eslint:recommended', 'airbnb', 'prettier', 'prettier/react'],
   plugins: ['react', 'prettier', 'react-hooks'],
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -18,11 +18,9 @@ module.exports = {
     graphql: true,
   },
   rules: {
-    'react/prefer-stateless-function': 'off',
     'react/no-danger': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/no-extraneous-dependencies': 'off',
   },
   settings: {
     'import/resolver': {

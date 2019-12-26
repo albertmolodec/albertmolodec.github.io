@@ -4,6 +4,15 @@
   "description": "My personal site",
   "author": "Albert Abdulmanov <albert.abdu@gmail.com>",
   "homepage": "https://github.com/albertmolodec/albertmolodec.github.io",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve -p 9000 -o",
+    "lint:js": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:css": "stylelint src/**/*.css",
+    "lint": "yarn lint:js && yarn lint:css",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\""
+  },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.3",
     "@mdx-js/react": "^1.5.3",
@@ -54,15 +63,6 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-order": "^3.1.1",
     "stylelint-webpack-plugin": "^1.1.2"
-  },
-  "scripts": {
-    "dev": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve -p 9000 -o",
-    "lint:js": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:css": "./node_modules/.bin/stylelint src/**/*.css",
-    "lint": "yarn lint:js && yarn lint:css",
-    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\""
   },
   "license": "MIT",
   "repository": {

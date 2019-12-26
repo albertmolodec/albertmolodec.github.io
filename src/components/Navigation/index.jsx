@@ -1,14 +1,11 @@
 import React from 'react';
-import useWindowWidth from '~src/hooks/useWindowWidth';
 import NavLink from '~src/ui/NavLink';
-import ThemeSwitcher from './components/ThemeSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
 import TABS from './TABS';
 
 import './styles.css';
 
 function Navigation() {
-  const windowWidth = useWindowWidth();
-
   return (
     <div className="navigation-wrapper wrapper">
       <ul className="navigation-desktop-list">
