@@ -8,7 +8,7 @@ module.exports = ({
   type: 'service_account',
   project_id: GOOGLE_PROJECT_ID,
   private_key_id: GOOGLE_PRIVATE_KEY_ID,
-  private_key: GOOGLE_PRIVATE_KEY || ''.replace(/(\\r)|(\\n)/g, '\n'),
+  private_key: GOOGLE_PRIVATE_KEY.replace(/(\\r)|(\\n)/g, '\n'),
   client_email: `${GOOGLE_DRIVE_NAME}@albert-wbs.iam.gserviceaccount.com`,
   client_id: GOOGLE_CLIENT_ID,
   auth_uri: 'https://accounts.google.com/o/oauth2/auth',

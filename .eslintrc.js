@@ -19,7 +19,6 @@ module.exports = {
   },
   rules: {
     'react/prefer-stateless-function': 'off',
-    'react/prop-types': 'off',
     'react/no-danger': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -32,7 +31,6 @@ module.exports = {
           ['~src', './src'],
           ['~content', './content'],
           ['~static', './static'],
-          ['~plugins', './plugins'],
         ],
         extensions: ['.js', '.jsx'],
       },

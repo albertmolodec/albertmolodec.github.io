@@ -8,7 +8,6 @@
       "~src/*": ["./src/*"],
       "~content/*": ["./content/*"],
       "~static/*": ["./static/*"],
-      "~plugins/*": ["./plugins/*"]
     }
   },
   "include": ["src/**/*", "content/**/*", "static/**/*", "plugins/**/*"],

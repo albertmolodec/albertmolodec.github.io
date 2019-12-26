@@ -1,7 +1,4 @@
-/* eslint-disable react/prop-types */
-
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import useGalleryControl from '~src/hooks/useGalleryControl';
 import Lightbox from '~src/layouts/Lightbox';
 
@@ -37,19 +34,5 @@ function FullscreenGallery({ mediaItems, initialActive, disableFullscreen }) {
     </Lightbox>
   );
 }
-
-FullscreenGallery.propTypes = {
-  mediaItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      type: PropTypes.oneOf(['image', 'video']),
-      date: PropTypes.string,
-      src: PropTypes.string.isRequired,
-      filename: PropTypes.string,
-    }),
-  ),
-  dateRequired: PropTypes.bool,
-};
-
-FullscreenGallery.defaultProps = {};
 
 export default FullscreenGallery;

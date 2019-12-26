@@ -50,7 +50,6 @@ module.exports = {
           '~src': 'src',
           '~content': 'content',
           '~static': 'static',
-          '~plugins': 'plugins',
         },
         extensions: ['js', 'jsx'],
       },
@@ -79,6 +78,7 @@ module.exports = {
         ],
       },
     },
+    // Sharp images
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -97,24 +97,17 @@ module.exports = {
         useAmpClientIdApi: true,
       },
     },
-    {
-      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-      options: {},
-    },
-    // {
-    //   resolve: 'gatsby-source-google-sheets',
-    //   options: {
-    //     spreadsheetId: '1-O2ZpXMRqKgarXVoK27MptqneqK8tWUBw13oCLDmBHA',
-    //     worksheetTitle: 'ExampleSheet',
-    //     credentials: buildCredentials(process.env),
-    //   },
-    // },
+    // Replace react to preact in production mode
     'gatsby-plugin-preact',
+    // Set headers
     `gatsby-plugin-react-helmet`,
+    // Parsers
     'gatsby-plugin-svgr',
-    `gatsby-plugin-catch-links`,
-    'gatsby-plugin-stylelint',
-    'gatsby-plugin-postcss',
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-catch-links`,
+    'gatsby-plugin-postcss',
+    // Dev-mode helpers
+    'gatsby-plugin-stylelint',
+    'gatsby-plugin-webpack-bundle-analyser-v2',
   ],
 };
