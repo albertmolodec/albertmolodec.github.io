@@ -8,12 +8,12 @@ aliases:
   install_node_modules: &install_node_modules
     run:
       name: Install Packages
-      command: npm install
+      command: yarn
 
   build: &build
     run:
       name: Build Gatsby Site
-      command: npm run build
+      command: yarn build
 
   # with use of https://blog.frederikring.com/articles/deploying-github-pages-circle-ci/
   deploy_gh_pages: &deploy_gh_pages
@@ -22,14 +22,14 @@ aliases:
       command: |
         if [ "${CIRCLE_BRANCH}" == "${SOURCE_BRANCH}" ]; then
           echo -e "Starting to deploy to Github Pages.\nWorking directory ${CIRCLE_WORKING_DIRECTORY}\nCurrent branch ${CIRCLE_BRANCH}"
-          
+
           git config --global user.email ${GIT_EMAIL}
           git config --global user.name ${GIT_NAME}
           git clone https://${GH_TOKEN}@github.com/${TARGET_REPO} out
           cd out
           git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
           git rm -rf .
-          
+
           cd ..
           cp -a public/. out/.
           cp -avr .circleci out
@@ -46,7 +46,7 @@ aliases:
   test: &test
     run:
       name: Testing
-      command: npm run test
+      command: yarn test
 
   restore_cache: &restore_cache
     restore_cache:
@@ -61,7 +61,7 @@ aliases:
       key: v1-dependencies-{{ checksum "package-lock.json" }}
       paths:
         - node_modules
-        
+
   persist_to_workspace: &persist_to_workspace
     persist_to_workspace:
       name: Persist build to be used by deploy
@@ -70,12 +70,12 @@ aliases:
         - package-lock.json
         - public
         - .circleci
-  
+
   attach_workspace: &attach_workspace
     attach_workspace:
       name: Attach build for deploying
       at: ~/website
-  
+
   # not used yed
   store_test_results: &store_test_results
     store_test_results:
@@ -97,7 +97,7 @@ jobs:
       - <<: *build
       - <<: *store_artifacts
       - <<: *persist_to_workspace
-  
+
   deploy:
     executor: node
     working_directory: ~/website

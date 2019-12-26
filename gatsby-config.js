@@ -1,4 +1,4 @@
-const buildCredentials = require('./config/buildGoogleDriveAPICredentials');
+// const buildCredentials = require('./config/buildGoogleDriveAPICredentials');
 const config = require('./config/website');
 
 require('dotenv').config();
@@ -101,14 +101,14 @@ module.exports = {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {},
     },
-    {
-      resolve: 'gatsby-source-google-sheets',
-      options: {
-        spreadsheetId: '1-O2ZpXMRqKgarXVoK27MptqneqK8tWUBw13oCLDmBHA',
-        worksheetTitle: 'ExampleSheet',
-        credentials: buildCredentials(process.env),
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-google-sheets',
+    //   options: {
+    //     spreadsheetId: '1-O2ZpXMRqKgarXVoK27MptqneqK8tWUBw13oCLDmBHA',
+    //     worksheetTitle: 'ExampleSheet',
+    //     credentials: buildCredentials(process.env),
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-svgr',
     `gatsby-plugin-catch-links`,
