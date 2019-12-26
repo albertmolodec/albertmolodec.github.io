@@ -15,7 +15,7 @@ Code, texts, projects and so on.
 - [x] CMS (Forestry)
 - [ ] ...
 
-## Структура проекта
+## Project structure
 
 ```
 .
@@ -59,7 +59,7 @@ Code, texts, projects and so on.
 
 ## CMS
 
-Supported by [forestry](https://app.forestry.io/sites/z1mqjijkwvzhfa/#/)
+[Forestry](https://app.forestry.io/sites/z1mqjijkwvzhfa/#/)
 
 ***
 
