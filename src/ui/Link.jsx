@@ -1,4 +1,7 @@
-.link {
+import React from 'react';
+import { styled } from 'linaria/react';
+
+const A = styled.a`
   padding: 0.3em;
 
   text-decoration: underline;
@@ -12,4 +15,10 @@
     background-color: var(--primary-color);
     border-radius: 4px;
   }
-}
+`;
+
+export default ({ href, children, ...props }) => (
+  <A href={href} {...props}>
+    {children}
+  </A>
+);

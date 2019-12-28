@@ -48,6 +48,8 @@ const FooterWrapper = styled.div`
 `;
 
 const HelloImg = styled.img`
+  width: 30px;
+  height: 30px;
   margin-right: 0.5em;
 `;
 

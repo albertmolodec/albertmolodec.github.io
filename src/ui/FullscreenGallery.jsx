@@ -28,7 +28,11 @@ function FullscreenGallery({ mediaItems, initialActive, disableFullscreen }) {
 
   return (
     <Lightbox>
-      <button type="button" onClick={disableFullscreen} style={{ color: 'white' }}>
+      <button
+        type="button"
+        onClick={disableFullscreen}
+        style={{ color: 'white' }}
+      >
         Выйти из полноэкранного режима
       </button>
     </Lightbox>
