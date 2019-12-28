@@ -86,17 +86,6 @@ module.exports = {
         useMozJpeg: true,
       },
     },
-    {
-      resolve: `gatsby-plugin-amp`,
-      options: {
-        canonicalBaseUrl: 'https://albertmolodec.github.io/',
-        components: ['amp-form'],
-        excludedPaths: ['/404*', '/'],
-        pathIdentifier: '/amp/',
-        relAmpHtmlPattern: '{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}',
-        useAmpClientIdApi: true,
-      },
-    },
     // Replace react to preact in production mode
     'gatsby-plugin-preact',
     // Set headers

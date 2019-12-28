@@ -6,7 +6,7 @@ import SEO from '~src/components/SEO';
 import formatReadingTime from '~src/helpers/formatReadingTime';
 
 function BlogIndex() {
-  const { allMarkdownRemark, allMdx } = useStaticQuery(
+  const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
         site {

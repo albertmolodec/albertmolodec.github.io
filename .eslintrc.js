@@ -19,6 +19,7 @@ module.exports = {
   },
   rules: {
     'react/no-danger': 'off',
+    'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'import/prefer-default-export': 'off',
