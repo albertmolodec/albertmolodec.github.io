@@ -106,6 +106,7 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-catch-links`,
     'gatsby-plugin-postcss',
+    'gatsby-plugin-linaria',
     // Dev-mode helpers
     'gatsby-plugin-stylelint',
     'gatsby-plugin-webpack-bundle-analyser-v2',
