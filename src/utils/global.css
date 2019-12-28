@@ -13,11 +13,19 @@
 }
 
 html {
-  font-family: Arial, PermianSansTypeface, system-ui, -apple-system, sans-serif;
+  font-family: 'Montserrat VF', Arial, system-ui, -apple-system, sans-serif;
+}
+
+a {
+  color: var(--primary-color);
 }
 
 a:focus {
   outline: thin dotted;
+}
+
+p {
+  margin: 0.5em 0;
 }
 
 body {

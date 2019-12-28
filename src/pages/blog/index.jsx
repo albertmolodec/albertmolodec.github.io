@@ -45,7 +45,7 @@ function BlogIndex() {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <div style={{ marginTop: '2rem' }} key={node.fields.slug}>
+          <div style={{ margin: '1em 0' }} key={node.fields.slug}>
             <h3>
               <Link to={`/${node.fields.slug}`}>{title}</Link>
             </h3>

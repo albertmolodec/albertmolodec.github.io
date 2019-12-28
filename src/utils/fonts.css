@@ -4,25 +4,15 @@
 }
 
 @font-face {
-  font-weight: normal;
-  font-family: 'PermianSansTypeface';
-  font-style: italic;
-  font-display: swap;
-  src: url('../assets/fonts/PermianSansTypeface-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: normal;
-  font-family: 'PermianSansTypeface';
-  font-style: normal;
-  src: url('../assets/fonts/PermianSansTypeface.woff2') format('woff2');
+  font-family: 'Montserrat VF';
+  src: url('../assets/fonts/Montserrat-VF.woff2') format('woff2-variations');
   font-display: swap;
 }
 
 @font-face {
   font-weight: bold;
-  font-family: 'PermianSansTypeface';
-  font-style: normal;
-  src: url('../assets/fonts/PermianSansTypeface-Bold.woff2') format('woff2');
+  font-family: 'Montserrat VF';
+  font-variation-settings: 'wght' 700;
+  src: url('../assets/fonts/Montserrat-VF.woff2') format('woff2-variations');
   font-display: swap;
 }
