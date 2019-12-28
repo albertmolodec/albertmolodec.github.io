@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { styled } from 'linaria/react';
 
 import Link from '~src/ui/Link';
-import helloSvg from '~src/assets/images/hello.svg';
+import helloPng from '~src/assets/images/hello.png';
 
 const Footer = () => {
   const {
@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <FooterWrapper className="wrapper">
-      <HelloImg src={helloSvg} alt="Мои контакты" />
+      <HelloImg src={helloPng} alt="Мои контакты" />
       <Contacts>
         {Object.entries(socialLinks).map(link => (
           <ContactItem key={link[0]}>
