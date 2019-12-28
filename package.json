@@ -19,6 +19,7 @@
     "@mdx-js/react": "^1.5.3",
     "@svgr/webpack": "^5.0.0",
     "dayjs": "^1.8.18",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.18.17",
     "gatsby-plugin-catch-links": "^2.1.21",
     "gatsby-plugin-linaria": "^2.0.0",
@@ -47,7 +48,6 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",

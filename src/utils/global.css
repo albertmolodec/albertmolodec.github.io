@@ -1,8 +1,8 @@
 :root {
-  --pink: #F94D82;
-  --light-grey: #F5F5F5;
-  --dark-blue: #364F6B;
-  --light-blue: #3FC1C9;
+  --pink: #f94d82;
+  --light-grey: #fcfcfc;
+  --dark-blue: #364f6b;
+  --light-blue: #3fc1c9;
 
   --font-size: 16px;
 
@@ -10,6 +10,14 @@
   --mobile-padding: 0.6rem 0.8rem;
 
   --breakpoint: 48rem;
+}
+
+html {
+  font-family: Arial, PermianSansTypeface, system-ui, -apple-system, sans-serif;
+}
+
+a:focus {
+  outline: thin dotted;
 }
 
 body {

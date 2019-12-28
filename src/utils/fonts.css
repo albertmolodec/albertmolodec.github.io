@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'Fira Code VF';
+  src: url('../assets/fonts/FiraCode-VF.ttf');
+}
+
+@font-face {
   font-weight: normal;
   font-family: 'PermianSansTypeface';
   font-style: italic;
