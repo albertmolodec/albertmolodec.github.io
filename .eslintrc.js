@@ -21,6 +21,7 @@ module.exports = {
     'react/no-danger': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'import/prefer-default-export': 'off',
   },
   settings: {
     'import/resolver': {

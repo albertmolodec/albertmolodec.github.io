@@ -9,7 +9,7 @@ function useEffectPage({ location }) {
   // ✅ Preserves identity until query changes
   const getFetchUrl = useCallback(() => {
     return `https://hn.algolia.com/api/v1/search?query=${query}`;
-  }, [query]); // ✅ Callback deps are OK
+  }, [query]);
 
   const fetchData = async url => {
     const response = await fetch(url);
@@ -20,7 +20,7 @@ function useEffectPage({ location }) {
   useEffect(() => {
     const url = getFetchUrl();
     fetchData(url);
-  }, [getFetchUrl]); // ✅ Effect deps are OK
+  }, [getFetchUrl]);
 
   return (
     <Layout location={location}>
