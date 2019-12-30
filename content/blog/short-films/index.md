@@ -10,9 +10,7 @@ date: '2018-01-24T00:00:00.000Z'
 
 Чем вы займетесь, если узнаете, что жить осталось всего тридцать дней? Главный герой фильма «Спринт» решает закрыться в квартире и закончить роман всей своей жизни.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/A64cgEdAFBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                        _Спринт, 2015_                                                                        |
+<iframe width="800" height="450" src="https://www.youtube.com/embed/A64cgEdAFBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## #Всёпока
 
@@ -20,17 +18,13 @@ date: '2018-01-24T00:00:00.000Z'
 
 Старшее поколение отчаянно борется с непонятными им явлениями с помощью запретов, младшее — пытается обратить внимание на причины подростковых самоубийств: невнимание родителей или, наоборот, тотальный контроль за ребенком.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/XqQ7574NqzE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                       _#ВсёПока, 2017_                                                                       |
+<iframe width="800" height="450" src="https://www.youtube.com/embed/XqQ7574NqzE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Пиндос
 
 Фильм, снятый одним дублем, раскрывает загадочную русскую душу. Мы защищаем своих и прогоняем чужих — это нормально. Но может ли приезжий американец стать таким вот «своим» для ребят из глубинки? На этот вопрос отвечает четырехминутный фильм «Пиндос».
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/Ufcwrz6aBBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                        _Пиндос, 2015_                                                                        |
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Ufcwrz6aBBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Пробуждение
 
@@ -38,17 +32,13 @@ date: '2018-01-24T00:00:00.000Z'
 
 В главной роли Владимир Вдовиченков.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/K8aP8oQlf-w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                     _Пробуждение, 2015_                                                                      |
+<iframe width="800" height="450" src="https://www.youtube.com/embed/K8aP8oQlf-w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Общество анонимных оптимистов
 
 Ржавый из «Даёшь молодёжь» убегает от депрессии.
 
-| <iframe width="800" height="450" src="https://www.youtube.com/embed/anUNof7U3pw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                            _Общество анонимных оптимистов, 2015_                                                             |
+<iframe width="800" height="450" src="https://www.youtube.com/embed/anUNof7U3pw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ---
 

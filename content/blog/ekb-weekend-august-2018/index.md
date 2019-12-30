@@ -11,135 +11,124 @@ date: '2018-08-13T00:00:00.000Z'
 
 Несколько дней назад, в преддверии моего двадцатидвухлетия, мы с Ксюшей решили провести уикенд в Екатеринбурге. И нисколько не пожалели.
 
-#### Дальше несколько фото, которые мы сделали во время прогулок
+> Дальше несколько фото, которые мы сделали во время прогулок
 
 В Екатеринбурге есть метро. Сейчас в нем всего одна линия, на которой 9 станций. Станции уютнее, чем в Москве. Здесь нет такой давки и спешки.
 
-Интересно, что жетоны выдают с надписью «Московский метрополитен». Кажется, столица поделилась лишними жетонами. Респект таким парням.
+Интересно, что жетоны выдают с надписью «Московский метрополитен». Кажется, столица поделилась лишними жетонами.
 
-![Metro_roof](./images/Metro_roof.jpg)
+![Потолки в метро Екатеринбурга](./images/Metro_roof.jpg)
 
-![Metro](./images/Metro.jpg)
+![Станция](./images/Metro.jpg)
 
-![Metro_Botanical_Station](./images/Metro_Botanical_Station.jpg)
+![Станция «Ботаническая»](./images/Metro_Botanical_Station.jpg)
 
-![Metro_out](./images/Metro_out.jpg)
+![Вид на метро снаружи](./images/Metro_out.jpg)
 
-Впервые жили в апартаментах. Это гораздо комфортнее, чем хостел. Советую всем в путешествиях не жалеть денег и снимать именно апартаменты. Вот наш апарт-отель: а. Но туда мы еще не добрались.
+Впервые жили в апартаментах. Это гораздо комфортнее, чем хостел. Советую всем в путешествиях не жалеть денег и снимать именно апартаменты..
 
-Для студентов билет стои.
-
-Можно зарегаться на Букинге по моей оссия — Моя история». Почти такой же есть. Вы и я получим по 1000 руб на счет. Бронирую с его помощью уже третий раз. До этого был только в Москве, сейчас и в Екб. Уверен, что будут и другие города. Люблю путешествовать.
-
-![Apartments](./images/Apartments.jpg)
+![Апартаменты](./images/Apartments.jpg)
 
 В двух шагах от отеля есть парк «Россия — Моя история». Почти такой же есть и у нас в Перми, в здании речного вокзала. Но туда мы еще не добрались.
 
 Для студентов билет стоит всего 100 рублей. Экспозиции две: «Рюриковичи и Романовы» и «Россия в XX веке». Мы выбрали вторую.
 
-![Russia_MyHistory_Name](./images/Russia_MyHistory_Name.jpg)
+![Музей «Россия — моя история»](./images/Russia_MyHistory_Name.jpg)
 
-![Russia_MyHistory](./images/Russia_MyHistory.jpg)
+![Музей «Россия — моя история»](./images/Russia_MyHistory.jpg)
 
 Мне не понравилось то, что события представлены в выгодном для существующей власти свете. Крым наш, Путин молодец, все дела. Ввод войск в Чехословакию в 1968 г. не освещен вообще. И такого там много. Заинтересовали лишь описание быта простых людей после революции и интерактивы с использованием проекторов.
 
-![Russia_MyHistory_PutIn](./images/Russia_MyHistory_PutIn.jpg)
+![Объективность зашкаливает](./images/Russia_MyHistory_PutIn.jpg)
 
-2 года назад один из моих любимых блогеров Эльдар Бродвей снял обзор на ибурге. Наконец я сходил. И не пожалел — .
+2 года назад один из моих любимых блогеров Эльдар Бродвей снял обзор на кафе с самыми вкусными вафлями в Екатеринбурге.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/p3eVsjfKjUU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Тогда я поставил себе цель обязательно сходить сюда, когда буду в Екатерибурге. Наконец я сходил. И не пожалел — вафли шедевральны.
 
-![Waffles_Cafe](./images/Waffles_Cafe.jpg)
+![Кофе + вафли «Энгельс»](./images/Waffles_Cafe.jpg)
 
-![Waffles_Coffee](./images/Waffles_Coffee.jpg)
+![У Ксюши сердечко, у меня — жопа. Как обычно](./images/Waffles_Coffee.jpg)
 
-![Waffles_Internier](./images/Waffles_Internier.jpg)
+![Интерьер кафе](./images/Waffles_Internier.jpg)
 
 Нормально сфоткать свою вафлю я не смог, поэтому вставлю фото с их сайта.
 
-![Waffles_Waffles](./images/Waffles_Waffles.jpg)
+![То же, только красиво](./images/Waffles_Waffles.jpg)
 
 Были на небоскребе. Высота «Высоцкого» — 188 метра. Смотровая площадка находится на 52 этаже. Высоты я безумно боюсь, но поднялся.
 
-![Vysotsky_out](./images/Vysotsky_out.jpg)
+![Небоскреб «Высоцкий снаружи»](./images/Vysotsky_out.jpg)
 
 Наверху очень ветрено и очень красиво.
 
-![Vysotsky_Clouds](./images/Vysotsky_Clouds.jpg)
+![Облака с высоты птичьего полета](./images/Vysotsky_Clouds.jpg)
 
-![Vysotsky_Marry](./images/Vysotsky_Marry.jpg)
+![Уральский креатив](./images/Vysotsky_Marry.jpg)
 
 На выходе дали бесплатный билет в музей Высоцкого. Глаз упал на картины художника, имя которого я забыл.
 
-![Museum_1](./images/Museum_1.jpg)
+![Картина 1](./images/Museum_1.jpg)
 
-![Museum_2](./images/Museum_2.jpg)
+![Картина 2](./images/Museum_2.jpg)
 
 В переходе есть стена Цоя.
 
-![Tsoy_1](./images/Tsoy_1.jpg)
+![](./images/Tsoy_1.jpg)
 
-![Tsoy_2](./images/Tsoy_2.jpg)
+![](./images/Tsoy_2.jpg)
 
-![Tsoy_3](./images/Tsoy_3.jpg)
+![](./images/Tsoy_3.jpg)
 
-![Tsoy_4](./images/Tsoy_4.jpg)
+![](./images/Tsoy_4.jpg)
 
 Улица Вайнера. Разница между фото 5 лет.
 
-![Me_and_sign_old](./images/Me_and_sign_old.jpg)
+![Я в 2013](./images/Me_and_sign_old.jpg)
 
-![Me_and_sign_new](./images/Me_and_sign_new-1.jpg)
+![Я в 2018](./images/Me_and_sign_new-1.jpg)
 
 Додо Пицца. Полюбил это место за любовь к мелочам.
 
-![Dodo](./images/Dodo.jpg)
+![Додо пицца](./images/Dodo.jpg)
 
 Икеа. Хотите почитать «Малышку на миллион»? Надеюсь, вы знаете шведский.
 
-![IKEA_book](./images/IKEA_book.jpg)
+![Million dollar baby](./images/IKEA_book.jpg)
 
-Как-то давно мне советовали поужинать в ресторане /images/River_Houses.jpg)
-![River_who_are_. Внутри стилёво — погрузились в Советский Союз, каким он должен был быть в идеале.
+Ресторан «Фабрика». Внутри стилёво — погрузились в Советский Союз, каким он должен был быть в идеале.
 
-![Fabrika_interier](./images/Fabrika_interier.jpg)
+![Ресторан «Фабрика»](./images/Fabrika_interier.jpg)
 
-![Fabrika_interier2](./images/Fabrika_interier2.jpg)
+![Ресторан «Фабрика»](./images/Fabrika_interier2.jpg)
 
-![Fabrika_lamps](./images/Fabrika_lamps.jpg)
-
-![Fabrika_lamps2](./images/Fabrika_lamps2.jpg)
+![Красивые лампы](./images/Fabrika_lamps.jpg)
 
 Заказали там пельмени. Нам их принесли, сверху огромная крышка. Внутри всего 12 штучек. Я был разочарован.
 
-![Fabrika_pelmeni](./images/Fabrika_pelmeni.jpg)
+![Порция пельменей](./images/Fabrika_pelmeni.jpg)
 
 Набережная.
 
-![River](./images/River.jpg)
+![Река](./images/River.jpg)
 
-![River_Houses](./images/River_Houses.jpg)
+![Набережная](./images/River_Houses.jpg)
 
-![River_who_are_we](./images/River_who_are_we.jpg)
+![Кто мы? Откуда? Куда мы идем?](./images/River_who_are_we.jpg)
 
-Тигр и Джерри.
+![Тигр и Джерри](./images/Tiger_and_Jerry.jpg)
 
-![Tiger_and_Jerry](./images/Tiger_and_Jerry.jpg)
+![Ельцин центр](./images/Yeltsin_Center.jpg)
 
-Ельцин Центр
+![Машина Бориса Ельцина](./images/Yeltsin_Center_Car.jpg)
 
-![Yeltsin_Center](./images/Yeltsin_Center.jpg)
+![Ельцин центр внутри](./images/Yeltsin_Center_Interier.jpg)
 
-![Yeltsin_Center_Car](./images/Yeltsin_Center_Car.jpg)
-
-![Yeltsin_Center_Interier](./images/Yeltsin_Center_Interier.jpg)
-
-![Yeltsin_Center_Opener](./images/Yeltsin_Center_Opener.jpg)
+![Необычная открывашка](./images/Yeltsin_Center_Opener.jpg)
 
 ---
 
-Нам очень понравился Екатеринбург. Хотел бы я, чтобы Пермь переняла некоторые его плюсы: высотность, метро, Икею, по-настоящему «живые» набережную и туристическую улицу (ул.Пермская — зашквар).
+Нам очень понравился Екатеринбург. Хотел бы я, чтобы Пермь переняла некоторые его плюсы: высотность, метро, Икею, по-настоящему «живые» набережную и туристическую улицу.
 
 Мечты, мечты...

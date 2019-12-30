@@ -45,11 +45,11 @@ function BlogIndex() {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <div style={{ margin: '1em 0' }} key={node.fields.slug}>
+          <div style={{ margin: '1.5em 0' }} key={node.fields.slug}>
             <h3>
               <Link to={`/${node.fields.slug}`}>{title}</Link>
             </h3>
-            <small>
+            <small style={{ display: 'block', margin: '0.3em 0' }}>
               {node.frontmatter.date} • {formatReadingTime(node.timeToRead)}
             </small>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
