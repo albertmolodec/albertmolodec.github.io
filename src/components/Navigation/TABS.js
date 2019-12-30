@@ -7,6 +7,9 @@ const TABS = [
     name: 'Блог',
     link: '/blog/',
   },
+];
+
+const ONLY_DEV_TABS = [
   {
     name: 'Проекты',
     link: '/projects/',
@@ -17,4 +20,6 @@ const TABS = [
   },
 ];
 
-export default TABS;
+const ALL_TABS = [...TABS, ...(process.env.IS_DEV ? ONLY_DEV_TABS : [])];
+
+export default ALL_TABS;

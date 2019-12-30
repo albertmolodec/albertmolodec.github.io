@@ -12,11 +12,11 @@ const NavLink = ({ active, ...props }) => (
       if (props.to === '/' && !isCurrent) isActive = false;
 
       return {
-        className:
-          isActive &&
-          css`
-            font-weight: bold;
-          `,
+        className: isActive
+          ? css`
+              font-weight: bold;
+            `
+          : '',
       };
     }}
   />
