@@ -10,14 +10,14 @@ const TABS = [
 ];
 
 const ONLY_DEV_TABS = [
-  {
-    name: 'Проекты',
-    link: '/projects/',
-  },
-  {
-    name: 'Списки',
-    link: '/lists/',
-  },
+  // {
+  //   name: 'Проекты',
+  //   link: '/projects/',
+  // },
+  // {
+  //   name: 'Списки',
+  //   link: '/lists/',
+  // },
 ];
 
 const ALL_TABS = [...TABS, ...(process.env.IS_DEV ? ONLY_DEV_TABS : [])];
