@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'linaria';
 import { Link } from 'gatsby';
 
 const NavLink = ({ active, ...props }) => (
@@ -11,11 +12,13 @@ const NavLink = ({ active, ...props }) => (
       if (props.to === '/' && !isCurrent) isActive = false;
 
       return {
-        active: isActive,
+        className:
+          isActive &&
+          css`
+            font-weight: bold;
+          `,
       };
     }}
-    // FIXME: not working
-    style={{ fontWeight: active ? 'bold' : 'normal' }}
   />
 );
 
