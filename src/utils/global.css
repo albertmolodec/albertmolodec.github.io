@@ -2,7 +2,7 @@
   --pink: #f94d82;
   --light-grey: #fcfcfc;
   --dark-grey: #acacac;
-  --dark-blue: #364f6b;
+  --dark-blue: #284362;
   --light-blue: #3fc1c9;
 
   --font-size: 16px;
@@ -27,6 +27,8 @@ a:focus {
 
 p {
   margin: 0.5em 0;
+
+  line-height: 1.33;
 }
 
 body {

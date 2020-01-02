@@ -24,7 +24,10 @@ function BlogPostTemplate({ pageContext, data }) {
             {post.frontmatter.date}
             {` • ${formatReadingTime(post.timeToRead)}`}
           </small>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div
+            style={{ marginTop: '3em' }}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
           <hr />
           <ul>
             <li>

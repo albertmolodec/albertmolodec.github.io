@@ -12,6 +12,7 @@
   .contact-item {
     padding: 0.2em 0.5em;
 
+    font-size: 0.9rem;
     text-transform: capitalize;
   }
 }
