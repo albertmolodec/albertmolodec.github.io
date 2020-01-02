@@ -88,6 +88,8 @@ aliases:
 jobs:
   build:
     executor: node
+    machine:
+      image: ubuntu-1604:201903-01
     working_directory: ~/website
     steps:
       - checkout
