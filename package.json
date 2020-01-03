@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
+    "deploy": "gh-pages -d public -b master",
     "serve": "gatsby serve -p 9000 -o",
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:css": "stylelint src/**/*.css",
