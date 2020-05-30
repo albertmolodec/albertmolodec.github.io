@@ -34,7 +34,7 @@ aliases:
           cp -a public/. out/.
           cp -avr .circleci out
           cd out
-          echo albertmolodec.js.org > ./CNAME
+          echo albert.works > ./CNAME
 
           git add -A
           git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
