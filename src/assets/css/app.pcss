@@ -1,21 +1,21 @@
 body {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
-    monospace;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
   padding: 0;
+
+  font-family: -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 main {
-  max-width: 75ch;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  max-width: 75ch;
   margin: 0 auto;
-  padding: 100px 32px;
+  padding: 32px;
 }
 
 header {
@@ -31,11 +31,13 @@ nav > a + a {
 }
 
 a[aria-current='page'],
-a[aria-current='page']:hover {
+a[aria-current='page']:hover,
+a[aria-current='page']:focus {
   color: var(--ne-global-foreground);
 }
 
-*:not(:hover) > .permalink {
+*:not(:hover) > .permalink,
+*:not(:focus) > .permalink {
   display: none;
 }
 
@@ -48,8 +50,8 @@ a[aria-current='page']:hover {
 }
 
 figure {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 [data-whatintent='mouse'] a:focus,
@@ -58,10 +60,12 @@ figure {
 }
 
 .turbolinks-progress-bar {
-  height: 5px;
   top: 4px;
-  left: 4px;
   right: 20px;
-  border-radius: 5px;
+  left: 4px;
+
+  height: 5px;
+
   background-color: var(--accent-color, #34f);
+  border-radius: 5px;
 }
