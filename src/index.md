@@ -11,14 +11,10 @@ title: Home
   />
 </picture>
 
-<p>Hi 👋</p>
-<p>
-  My name is <b>Albert</b>.
-</p>
-<p>
-  I have a diploma in information security, I work as a front-end developer.
-  Used to be chief editor and designer for a faculty newspaper.
-</p>
-<p>
-  I was born in Chusovoy, got higher education in Perm, live in St. Petersburg. I like to travel.
-</p>
+Hi 👋
+
+My name is **Albert**.
+
+I have a diploma in information security, I work as a front-end developer. I was a chief editor and designer for a faculty newspaper.
+
+I was born in Chusovoy, got higher education in Perm, live in St. Petersburg. I like to travel.
