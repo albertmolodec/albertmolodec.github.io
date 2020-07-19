@@ -2,6 +2,7 @@ backend:
   name: github
   repo: albertmolodec/albertmolodec.github.io
   branch: source
+  site_url: albertworks-personal-website.netlify.app
 
 # Uncomment below to enable drafts
 publish_mode: editorial_workflow
