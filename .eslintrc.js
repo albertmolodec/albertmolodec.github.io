@@ -1,28 +1,16 @@
 module.exports = {
-  parser: 'babel-eslint',
   env: {
     browser: true,
     node: true,
     es6: true,
   },
-  extends: ['eslint:recommended', 'airbnb', 'prettier', 'prettier/react'],
-  plugins: ['react', 'prettier', 'react-hooks'],
+  extends: ['eslint:recommended', 'airbnb', 'prettier'],
+  plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  globals: {
-    graphql: true,
   },
   rules: {
-    'react/no-danger': 'off',
-    'react/prop-types': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
     'import/prefer-default-export': 'off',
   },
   settings: {

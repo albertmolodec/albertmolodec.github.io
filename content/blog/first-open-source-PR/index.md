@@ -45,8 +45,7 @@ date: '2019-04-25T00:00:00.000Z'
 
 Но он не работает. Проблема здесь:
 
-```javascript
-...
+```jsx
 <div
   className={classnames(className, cn({ dragging: this.dragging }))}
   style={{ ...style, overflow: hideScrollbars ? 'hidden' : 'overflow' }}
