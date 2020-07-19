@@ -33,9 +33,6 @@ jobs:
       - name: Build 🔧
         run: npm run build
 
-      - name: Set domain 🎯
-        run: echo albert.works > CNAME
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.7
         with:
