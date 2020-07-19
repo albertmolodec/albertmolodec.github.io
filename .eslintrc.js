@@ -4,7 +4,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: ['eslint:recommended', 'airbnb', 'prettier'],
+  extends: ['eslint:recommended', 'prettier'],
   plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2020,
@@ -12,17 +12,5 @@ module.exports = {
   },
   rules: {
     'import/prefer-default-export': 'off',
-  },
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [
-          ['~src', './src'],
-          ['~content', './content'],
-          ['~static', './static'],
-        ],
-        extensions: ['.js', '.jsx'],
-      },
-    },
   },
 };

@@ -1,24 +1,26 @@
-const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight')
-const htmlMinTransform = require('./utils/transforms/htmlmin.js')
-const contentParser = require('./utils/transforms/contentParser.js')
-const htmlDate = require('./utils/filters/htmlDate.js')
-const rssPlugin = require('@11ty/eleventy-plugin-rss')
-const pwaPlugin = require('eleventy-plugin-pwa')
-const date = require('./utils/filters/date.js')
-const fs = require('fs')
+const fs = require('fs');
+
+const htmlMinTransform = require('./utils/transforms/htmlmin.js');
+const contentParser = require('./utils/transforms/contentParser.js');
+const htmlDate = require('./utils/filters/htmlDate.js');
+const date = require('./utils/filters/date.js');
+
+const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
+const rssPlugin = require('@11ty/eleventy-plugin-rss');
+const pwaPlugin = require('eleventy-plugin-pwa');
 
 /**
  * Import site configuration
  */
-const siteConfig = require('./src/_data/config.json')
+const siteConfig = require('./src/_data/config.json');
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
   /**
    * Add custom watch targets
    *
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
-  eleventyConfig.addWatchTarget('./bundle/')
+  eleventyConfig.addWatchTarget('./bundle/');
 
   /**
    * Passthrough file copy
@@ -26,15 +28,17 @@ module.exports = function (eleventyConfig) {
    * @link https://www.11ty.io/docs/copy/
    */
   eleventyConfig.addPassthroughCopy({
-    './static': '.'
-  })
-  eleventyConfig.addPassthroughCopy("./src/admin");
-  eleventyConfig.addPassthroughCopy(`./src/assets/css/${siteConfig.syntaxTheme}`)
+    './static': '.',
+  });
+  eleventyConfig.addPassthroughCopy('./src/admin');
+  eleventyConfig.addPassthroughCopy(
+    `./src/assets/css/${siteConfig.syntaxTheme}`,
+  );
   eleventyConfig.addPassthroughCopy({
-    bundle: 'assets'
-  })
-  eleventyConfig.addPassthroughCopy("./src/blog/**/images/**/*");
-  eleventyConfig.addPassthroughCopy("./src/blog/**/videos/**/*");
+    bundle: 'assets',
+  });
+  eleventyConfig.addPassthroughCopy('./src/blog/**/images/**/*');
+  eleventyConfig.addPassthroughCopy('./src/blog/**/videos/**/*');
 
   /**
    * Add filters
@@ -42,9 +46,9 @@ module.exports = function (eleventyConfig) {
    * @link https://www.11ty.io/docs/filters/
    */
   // human friendly date format
-  eleventyConfig.addFilter('dateFilter', date)
+  eleventyConfig.addFilter('dateFilter', date);
   // robot friendly date format for crawlers
-  eleventyConfig.addFilter('htmlDate', htmlDate)
+  eleventyConfig.addFilter('htmlDate', htmlDate);
 
   /**
    * Add Transforms
@@ -53,10 +57,10 @@ module.exports = function (eleventyConfig) {
    */
   if (process.env.ELEVENTY_ENV === 'production') {
     // Minify HTML when building for production
-    eleventyConfig.addTransform('htmlmin', htmlMinTransform)
+    eleventyConfig.addTransform('htmlmin', htmlMinTransform);
   }
   // Parse the page HTML content and perform some manipulation
-  eleventyConfig.addTransform('contentParser', contentParser)
+  eleventyConfig.addTransform('contentParser', contentParser);
 
   /**
    * Add Plugins
@@ -64,9 +68,9 @@ module.exports = function (eleventyConfig) {
    * @link https://github.com/11ty/eleventy-plugin-syntaxhighlight
    * @link https://github.com/okitavera/eleventy-plugin-pwa
    */
-  eleventyConfig.addPlugin(rssPlugin)
-  eleventyConfig.addPlugin(syntaxHighlightPlugin)
-  eleventyConfig.addPlugin(pwaPlugin)
+  eleventyConfig.addPlugin(rssPlugin);
+  eleventyConfig.addPlugin(syntaxHighlightPlugin);
+  eleventyConfig.addPlugin(pwaPlugin);
 
   /**
    * Create custom data collections
@@ -74,17 +78,13 @@ module.exports = function (eleventyConfig) {
    * Code from https://github.com/hankchizljaw/hylia
    */
   // Blog posts collection
-  const now = new Date()
-  const livePosts = post => post.date <= now && !post.data.draft
+  const now = new Date();
+  const livePosts = post => post.date <= now && !post.data.draft;
   eleventyConfig.addCollection('posts', collection => {
     return [
-      ...collection
-      .getFilteredByGlob(
-        `./src/blog/**/*`
-      )
-      .filter(livePosts),
-    ]
-  })
+      ...collection.getFilteredByGlob(`./src/blog/**/*`).filter(livePosts),
+    ];
+  });
 
   /**
    * Override BrowserSync Server options
@@ -97,24 +97,24 @@ module.exports = function (eleventyConfig) {
     snippetOptions: {
       rule: {
         match: /<\/head>/i,
-        fn: function (snippet, match) {
-          return snippet + match
+        fn: function(snippet, match) {
+          return snippet + match;
         },
       },
     },
     // Set local server 404 fallback
     callbacks: {
-      ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync('dist/404.html')
+      ready: function(err, browserSync) {
+        const content_404 = fs.readFileSync('dist/404.html');
 
         browserSync.addMiddleware('*', (req, res) => {
           // Provides the 404 content without redirect.
-          res.write(content_404)
-          res.end()
-        })
+          res.write(content_404);
+          res.end();
+        });
       },
     },
-  })
+  });
 
   /*
    * Disable use gitignore for avoiding ignoring of /bundle folder during watch
@@ -136,5 +136,5 @@ module.exports = function (eleventyConfig) {
     templateFormats: ['njk', 'md'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
-  }
-}
+  };
+};
