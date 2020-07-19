@@ -45,15 +45,7 @@ date: '2019-04-25T00:00:00.000Z'
 
 Но он не работает. Проблема здесь:
 
-```jsx
-<div
-  className={classnames(className, cn({ dragging: this.dragging }))}
-  style={{ ...style, overflow: hideScrollbars ? 'hidden' : 'overflow' }}
-  ref={this.container}
-  onTouchStart={this.onTouchStart}
-  onMouseDown={this.onMouseDown}
->
-```
+![jsx code example](./images/jsx.png "Участок кода")
 
 Вместо `overflow` должно быть значение `visible`.
 Как дойдут руки, попробую исправить ошибку и отправить Pull request.

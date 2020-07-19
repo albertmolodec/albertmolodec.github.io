@@ -1,6 +1,30 @@
 ---
 layout: 'home'
-title: XITY Starter
+title: Home
 ---
 
-**XITY** (roman version of 11ty) is a basic starter blog/site built on top of Eleventy. You will find just some basic tools to start your project, no frameworks, no extra css and html, nothing to clean. **Just start from here**.
+<picture>
+  <source type="image/webp" srcSet="/low-poly-avatar.webp" />
+  <img
+    src="/low-poly-avatar.png"
+    className="image"
+    alt="Мой низкополигональный портрет"
+  />
+</picture>
+
+<p>Привет.</p>
+<p>
+  Меня зовут <b>Альберт Абдульманов</b>.
+  Я&nbsp;люблю код и&nbsp;тексты. Не&nbsp;люблю овощи и&nbsp;неудобные
+  сайты.
+</p>
+<p>
+  У меня есть диплом специалиста по информационной безопасности,
+  работаю фронтенд-разработчиком. Раньше был главредом и верстальщиком
+  факультетской газеты.
+</p>
+<p>
+  Родился в Чусовом, получил высшее образование в Перми, живу в
+  Санкт-Петербурге, люблю путешествовать.
+</p>
+

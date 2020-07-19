@@ -33,6 +33,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     bundle: 'assets'
   })
+  eleventyConfig.addPassthroughCopy("./src/blog/**/images/**/*");
+  eleventyConfig.addPassthroughCopy("./src/blog/**/videos/**/*");
 
   /**
    * Add filters
@@ -78,7 +80,7 @@ module.exports = function (eleventyConfig) {
     return [
       ...collection
       .getFilteredByGlob(
-        `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/**/*`
+        `./src/blog/**/*`
       )
       .filter(livePosts),
     ]
