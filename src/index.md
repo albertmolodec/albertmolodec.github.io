@@ -4,27 +4,21 @@ title: Home
 ---
 
 <picture>
-  <source type="image/webp" srcSet="/low-poly-avatar.webp" />
+  <source srcset="/low-poly-avatar.webp" type="image/webp">
   <img
     src="/low-poly-avatar.png"
-    className="image"
-    alt="Мой низкополигональный портрет"
+    alt="My low poly portrait"
   />
 </picture>
 
-<p>Привет.</p>
+<p>Hi 👋</p>
 <p>
-  Меня зовут <b>Альберт Абдульманов</b>.
-  Я&nbsp;люблю код и&nbsp;тексты. Не&nbsp;люблю овощи и&nbsp;неудобные
-  сайты.
+  My name is <b>Albert</b>.
 </p>
 <p>
-  У меня есть диплом специалиста по информационной безопасности,
-  работаю фронтенд-разработчиком. Раньше был главредом и верстальщиком
-  факультетской газеты.
+  I have a diploma in information security, I work as a front-end developer.
+  Used to be chief editor and designer for a faculty newspaper.
 </p>
 <p>
-  Родился в Чусовом, получил высшее образование в Перми, живу в
-  Санкт-Петербурге, люблю путешествовать.
+  I was born in Chusovoy, got higher education in Perm, live in St. Petersburg. I like to travel.
 </p>
-

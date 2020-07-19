@@ -7,7 +7,7 @@ backend:
 # Uncomment below to enable drafts
 publish_mode: editorial_workflow
 
-media_folder: "static/img"
+media_folder: "static"
 
 collections:
   # Our blog posts
