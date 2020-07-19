@@ -1,6 +1,7 @@
 ---
 title: Test page
-permalink: /test
+layout: page
+permalink: "/test"
 eleventyNavigation:
   order: 0
   key: test
