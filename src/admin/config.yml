@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: albertmolodec/albertmolodec.github.io
   branch: source
 
 # Uncomment below to enable drafts
