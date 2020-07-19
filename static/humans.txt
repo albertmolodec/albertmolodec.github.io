@@ -1,10 +1,10 @@
-/* TEAM */
+# humanstxt.org/
+# The humans responsible & technology colophon
 
-Creator: AlbertMolodec
-URL: https://albertmolodec.js.org
-Description: I'm frontend developer and just good guy.
+# TEAM
 
-/* SITE */
+    Albert Abdulmanov -- Developer -- @albertmolodec
 
-Standards: HTML5, CSS
-Components: Gatsby
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, POSTCSS, Javascript, 11ty

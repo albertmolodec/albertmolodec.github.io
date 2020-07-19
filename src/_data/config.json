@@ -1,0 +1,19 @@
+{
+  "name": "Albert Works",
+  "shortDesc": "I'm Albert Abdulmanov, Web Developer from Russia.",
+  "url": "https:/albert.works",
+  "lang": "ru",
+  "authorHandle": "@albertmolodec",
+  "authorName": "Albert Abdulmanov",
+  "syntaxTheme": "prism-material-light.css",
+  "permalinkClass": ["permalink"],
+  "iframeClass": ["iframes-wrapper"],
+  "codeClass": ["code-wrapper"],
+  "figureClass": ["figure"],
+  "paths": {
+    "src": "src",
+    "blogdir": "blog",
+    "includes": "components",
+    "output": "dist"
+  }
+}
