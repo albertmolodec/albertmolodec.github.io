@@ -44,10 +44,6 @@ jobs:
           FOLDER: dist
 
       - name: Deploy cloudflare workers 🌩️
-        uses: cloudflare/serverless-action@master
+        uses: cloudflare/wrangler-action@1.3.0
         with:
-          CLOUDFLARE_AUTH_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-          CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
-          CLOUDFLARE_SCRIPT_NAME: example-worker
+          apiToken: ${{ secrets.CLOUDFLARE_WORKERS_TOKEN }}
