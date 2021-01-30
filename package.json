@@ -1,0 +1,78 @@
+{
+  "name": "albertmolodec.github.io",
+  "version": "2.0.0",
+  "description": "My personal site",
+  "author": "Albert Abdulmanov <albert.abdu@gmail.com>",
+  "homepage": "https://github.com/albertmolodec/albertmolodec.github.io",
+  "scripts": {
+    "dev": "env-cmd netlify dev --functions=./src/lambda",
+    "build": "cross-env ELEVENTY_ENV=production run-s clean build:assets build:html",
+    "watch": "env-cmd cross-env ELEVENTY_ENV=development run-s clean build:assets && run-p serve watch:*",
+    "serve": "eleventy --serve --port=8080",
+    "clean": "rm -rf .parcel-cache dist bundle",
+    "lint": "run-p lint:*",
+    "update": "run-p update:*",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\" \"src/**/*.md\"",
+    "build:html": "eleventy",
+    "build:assets": "parcel build ./src/css/app.pcss ./src/js/*.js --dist-dir ./bundle --no-source-maps",
+    "build:lambda": "netlify-lambda build ./src/lambda",
+    "watch:assets": "parcel watch ./src/css/app.pcss ./src/js/*.js --dist-dir ./bundle --no-source-maps --no-hmr",
+    "update:deps": "npm run upgrade-interactive --latest && npm run upgrade",
+    "update:cssdb": "npx browserslist@latest --update-db",
+    "lint:js": "eslint src/**/*.js --ignore-pattern public",
+    "lint:css": "stylelint src/**/*.{pcss,css}"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "0.11.0",
+    "@11ty/eleventy-plugin-rss": "1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "3.0.1",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.2.0",
+    "airtable": "^0.8.1",
+    "cross-env": "7.0.2",
+    "cssnano": "4.1.10",
+    "cssnano-preset-advanced": "4.0.7",
+    "env-cmd": "^10.1.0",
+    "html-minifier": "4.0.0",
+    "jsdom": "13.0.0",
+    "netlify-lambda": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0-nightly.347",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-reporter": "6.0.1",
+    "slugify": "1.4.4",
+    "tailwindcss": "^1.5.2",
+    "tailwindcss-dark-mode": "^1.1.5",
+    "turbolinks": "5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^1.19.1",
+    "stylelint": "^12.0.1",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^3.1.1"
+  },
+  "browserslist": [
+    "last 1 Chrome versions",
+    "last 1 Firefox versions",
+    "last 1 Safari versions",
+    "last 1 Edge versions"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertmolodec/albertmolodec.github.io.git"
+  },
+  "keywords": [
+    "Albert Abdulmanov",
+    "personal",
+    "portfolio",
+    "blog",
+    "frontend",
+    "development"
+  ]
+}

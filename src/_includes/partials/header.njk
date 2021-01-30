@@ -1,0 +1,25 @@
+<header class="bg-gray-900 text-white">
+  <div class="py-1 w-full text-center bg-orange-700">
+    🚧 In development
+  </div>
+  {% if navigation.items %}
+    <nav class="max-w-4xl mx-auto p-4 flex justify-between">
+      {% for item in navigation.items %}
+        {% set relExternal = '' %}
+        {% set isCurrentArea = '' %}
+        {% set isCurrentClass = '' %}
+
+        {% if item.external %}
+          {% set relExternal = ' rel="external" target="_blank"' %}
+        {% endif %}
+        {% if page.url == item.url %}
+          {% set isCurrentClass = ' underline' %}
+          {% set isCurrentArea = ' aria-current="page"' %}
+        {% endif %}
+        <a class="font-bold px-2 text-center{{ isCurrentClass | safe }}" href="{{ item.url }}" {{ relExternal | safe }} {{ isCurrentArea | safe }}>
+          {{ item.text }}
+        </a>
+      {% endfor %}
+    </nav>
+  {% endif %}
+</header>

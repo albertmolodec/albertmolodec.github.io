@@ -1,0 +1,19 @@
+---
+layout: page
+title: Blog
+---
+{% from "components/postItem.njk" import postItem %}
+
+{% set postList = collections.posts %}
+{% if collections.posts.length %}
+  <section>
+    <ul reversed="reversed">
+      {% for item in postList | reverse %}
+        {% if not env.IS_DEV and item.data.onlydev %}
+        {% else %}
+          {{ postItem(item.url, item.data.title, item.date, item.data.lang) }}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

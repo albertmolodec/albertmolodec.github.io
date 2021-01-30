@@ -1,0 +1,15 @@
+[build]
+  functions = "dist/lambda"
+  command = "npm run build:lambda"
+
+[dev]
+  framework = "#custom"
+  command = "npm run watch" # or "npm run serve" if you want to test prebuilt assets
+  targetPort = 8080
+  port = 8888
+  publish = "dist"
+
+[[redirects]]
+  from = "/api/:function"
+  to = "/.netlify/functions/:function"
+  status = 200

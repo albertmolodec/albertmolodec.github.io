@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/",
+      "external": false
+    },
+    {
+      "text": "Blog",
+      "url": "/blog/",
+      "external": false
+    },
+    {
+      "text": "Podcasts",
+      "url": "/podcasts/",
+      "external": false
+    },
+    {
+      "text": "Wishlist 🇷🇺",
+      "url": "/wishlist",
+      "external": false
+    }
+  ]
+}

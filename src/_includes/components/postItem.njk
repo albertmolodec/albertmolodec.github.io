@@ -1,0 +1,15 @@
+{% macro postItem(url, title, date, lang) %}
+  <li>
+    <a class="flex flex-col p-4 hover:bg-gray-200 focus:shadow-outline focus:outline-none" href="{{ url }}" rel="bookmark">
+      <h3 class="font-bold pr-8">{{ title }}
+        {% if lang == "en" %}
+          🇺🇸
+        {% endif %}
+        {% if lang == "ru" %}
+          🇷🇺
+        {% endif %}
+      </h3>
+      <time class="text-sm text-gray-500" datetime="{{ date | htmlDate }}">{{ date | dateFilter }}</time>
+    </a>
+  </li>
+{% endmacro %}

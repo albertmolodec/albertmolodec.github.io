@@ -1,0 +1,14 @@
+html,
+body {
+  @apply font-interLegacy text-gray-800 antialiased;
+}
+@supports (font-variation-settings: normal) {
+  html,
+  body {
+    @apply font-inter text-gray-800 antialiased;
+  }
+}
+
+kbd {
+  @apply shadow-sm p-1 rounded border border-gray-400;
+}
