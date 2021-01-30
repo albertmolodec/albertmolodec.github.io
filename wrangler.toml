@@ -1,0 +1,4 @@
+name = "example-worker"
+type = "javascript"
+account_id = "ac5ec5db239c906169d704cff73a2f96"
+workers_dev = true

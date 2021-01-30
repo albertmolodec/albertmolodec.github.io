@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - source
+      - cloudflare-workers
   watch:
     types: [started]
 jobs:
@@ -41,3 +42,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: master
           FOLDER: dist
+
+      - name: Deploy cloudflare workers 🌩️
+        uses: cloudflare/serverless-action@master
+        with:
+          CLOUDFLARE_AUTH_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+          CLOUDFLARE_SCRIPT_NAME: example-worker
+        run: echo "deploy workers"
