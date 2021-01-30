@@ -51,4 +51,3 @@ jobs:
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
           CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
           CLOUDFLARE_SCRIPT_NAME: example-worker
-        run: echo "deploy workers"
