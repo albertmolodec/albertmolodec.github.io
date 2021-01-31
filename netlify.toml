@@ -10,6 +10,6 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/api/:function"
+  from = "/:function"
   to = "/.netlify/functions/:function"
   status = 200
