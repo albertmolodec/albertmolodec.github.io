@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - source
-      - cloudflare-workers
   watch:
     types: [started]
 jobs:
