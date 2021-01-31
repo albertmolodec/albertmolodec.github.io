@@ -1,5 +1,5 @@
 module.exports = {
   target: "webworker",
-  entry: "./example-worker.js",
+  entry: "./airtable.js",
   mode: "production"
 }

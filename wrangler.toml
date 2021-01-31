@@ -1,5 +1,8 @@
-name = "example-worker"
+name = "airtable"
 type = "webpack"
 webpack_config = "webpack.config.js"
 account_id = "ac5ec5db239c906169d704cff73a2f96"
 workers_dev = true
+kv_namespaces = [
+  { binding = "AIRTABLE_KV", id = "031a4510ba6b40acb2e139ab3a4994e7", preview_id = "031a4510ba6b40acb2e139ab3a4994e7" }
+]
