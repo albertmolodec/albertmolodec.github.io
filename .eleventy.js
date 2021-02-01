@@ -1,12 +1,6 @@
 const fs = require('fs')
 
 const htmlMinTransform = require('./src/transforms/htmlmin.js')
-const contentParser = require('./src/transforms/contentParser.js')
-const htmlDate = require('./src/filters/htmlDate.js')
-const date = require('./src/filters/date.js')
-
-const rssPlugin = require('@11ty/eleventy-plugin-rss')
-const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 const siteConfig = require('./src/_data/config.json')
 
@@ -15,35 +9,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('./src/images')
   eleventyConfig.addPassthroughCopy(`./src/css/${siteConfig.syntaxTheme}`)
-  eleventyConfig.addPassthroughCopy('./src/blog/**/{images,videos}/**/*')
   eleventyConfig.addPassthroughCopy({ './src/public': '.' })
   eleventyConfig.addPassthroughCopy({ bundle: '.' })
-
-  // human friendly date format
-  eleventyConfig.addFilter('dateFilter', date)
-  // robot friendly date format for crawlers
-  eleventyConfig.addFilter('htmlDate', htmlDate)
 
   if (process.env.NODE_ENV === 'production') {
     eleventyConfig.addTransform('htmlmin', htmlMinTransform)
   }
-  // Parse the page HTML content and perform some manipulation
-  eleventyConfig.addTransform('contentParser', contentParser)
-
-  eleventyConfig.addPlugin(rssPlugin)
-  eleventyConfig.addPlugin(syntaxHighlightPlugin)
-
-  /**
-   * Create custom data collections
-   * for blog and feed
-   * Code from https://github.com/hankchizljaw/hylia
-   */
-  // Blog posts collection
-  const now = new Date()
-  const livePosts = post => post.date <= now && !post.data.draft
-  eleventyConfig.addCollection('posts', collection => [
-    ...collection.getFilteredByGlob(`./src/blog/**/*`).filter(livePosts),
-  ])
 
   /**
    * Override BrowserSync Server options

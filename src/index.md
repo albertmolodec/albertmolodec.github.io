@@ -1,5 +1,5 @@
 ---
-layout: typography-page
+layout: page
 title: Home
 ---
 

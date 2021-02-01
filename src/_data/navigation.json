@@ -7,8 +7,8 @@
     },
     {
       "text": "Blog",
-      "url": "/blog/",
-      "external": false
+      "url": "https://blog.albert.works/",
+      "external": true
     },
     {
       "text": "Podcasts",

@@ -5,9 +5,5 @@
   "lang": "ru",
   "authorHandle": "@albertmolodec",
   "authorName": "Albert Abdulmanov",
-  "syntaxTheme": "prism-nord.css",
-  "permalinkClass": ["permalink"],
-  "iframeClass": ["iframes-wrapper"],
-  "codeClass": ["code-wrapper"],
-  "figureClass": ["figure"]
+  "syntaxTheme": "prism-nord.css"
 }

@@ -13,14 +13,11 @@ module.exports = {
       whitelistPatternsChildren: [/prose$/],
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/custom-forms'),
-  ],
+  plugins: [require('@tailwindcss/custom-forms')],
   theme: {
-    colors
+    colors,
   },
   variants: {
     margin: ['responsive', 'first', 'last'],
   },
-};
+}
