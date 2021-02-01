@@ -38,18 +38,14 @@ Start local dev server.
 npm run dev
 ```
 
-Netlify runs Parcel and links serverless-functions with it. Parcel port and Netlify dev server port are set in the `netlify.toml`: `targetPort` and `port` respectively.
-
 ## Environment variables
 
 | Key                    |               Value               | Where to set |
 | ---------------------- | :-------------------------------: | :----------: |
 | **`API_DOMAIN`**       | `https://albertworks.netlify.app` |    Github    |
-| **`CUSTOM_DOMAIN`**    |      `https://albert.works`       |   Netlify    |
 | **`AIRTABLE_API_KEY`** |                ...                |   Netlify    |
 
 - All these variables should be listed in your `.env` file when you start local server.
-- Don't forget to add your custom domain to the "Custom domains" section in Netlify. Netlify CMS won't work without it.
 
 ## Other
 

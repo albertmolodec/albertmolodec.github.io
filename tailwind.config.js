@@ -1,7 +1,8 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  darkMode: false,
   purge: {
-    enabled: process.env.ELEVENTY_ENV === 'production',
+    enabled: process.env.NODE_ENV === 'production',
     content: [
       './src/**/*.njk',
       './src/**/*.md',
@@ -17,7 +18,7 @@ module.exports = {
     require('@tailwindcss/custom-forms'),
   ],
   theme: {
-    extend: {},
+    colors
   },
   variants: {
     margin: ['responsive', 'first', 'last'],

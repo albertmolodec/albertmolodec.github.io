@@ -7,9 +7,7 @@ run('#wishlist', target => {
       target.innerHTML = ''
       const wishElements = []
       for (let wish of records) {
-        const {
-          fields: { Item, URL, Done, Own },
-        } = wish
+        const { Item, URL, Done, Own } = wish
         const listItem = document.createElement('li')
         const spanElement = document.createElement('span')
         spanElement.textContent = Item
@@ -24,7 +22,7 @@ run('#wishlist', target => {
           const aElement = document.createElement('a')
           aElement.href = URL
           aElement.target = '_blank'
-          aElement.classList.add('text-blue-700')
+          aElement.classList.add('text-blue-500')
           aElement.classList.add('hover:underline')
           wrap(spanElement, aElement)
         }

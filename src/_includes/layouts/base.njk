@@ -9,9 +9,11 @@
     {% block head %}{% endblock %}
 
     {% if env.IS_DEV %}
+      <link rel="stylesheet" href="/css/tailwind.css"/>
       <link rel="stylesheet" href="/css/app.css"/>
     {% else %}
       <style>
+        {% include "../../../dist/css/tailwind.css" %}
         {% include "../../../dist/css/app.css" %}
       </style>
     {% endif %}
