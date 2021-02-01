@@ -42,10 +42,8 @@ npm run dev
 
 | Key                    |               Value               | Where to set |
 | ---------------------- | :-------------------------------: | :----------: |
-| **`API_DOMAIN`**       | `https://albertworks.netlify.app` |    Github    |
+| **`API_DOMAIN`**       |    `https://api.albert.works`     |    Github    |
 | **`AIRTABLE_API_KEY`** |                ...                |   Netlify    |
-
-- All these variables should be listed in your `.env` file when you start local server.
 
 ## Other
 

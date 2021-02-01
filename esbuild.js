@@ -10,6 +10,8 @@ const glob = require('tiny-glob')
 
   let entryPoints = await glob('src/js/**/*.js')
 
+  console.log(process.env);
+
   try {
     await build({
       entryPoints,
