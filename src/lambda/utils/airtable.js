@@ -25,4 +25,4 @@ module.exports = {
       studios: 'Studios',
     },
   },
-};
+}

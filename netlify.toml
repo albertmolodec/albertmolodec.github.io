@@ -1,10 +1,9 @@
 [build]
-  functions = "dist/lambda"
-  command = "npm run build:lambda"
+  functions = "src/lambda"
 
 [dev]
   framework = "#custom"
-  command = "npm run watch" # or "npm run serve" if you want to test prebuilt assets
+  command = "npm run watch"
   targetPort = 8080
   port = 8888
   publish = "dist"

@@ -6,14 +6,14 @@
     {% include "partials/meta.njk" %}
     <link rel="icon" href="/favicon.png" type="image/png"/>
 
-    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
-
     {% block head %}{% endblock %}
 
     {% if env.IS_DEV %}
+      <link rel="stylesheet" href="/css/tailwind.css"/>
       <link rel="stylesheet" href="/css/app.css"/>
     {% else %}
       <style>
+        {% include "../../../dist/css/tailwind.css" %}
         {% include "../../../dist/css/app.css" %}
       </style>
     {% endif %}
@@ -26,7 +26,9 @@
       {% block content %}{% endblock content %}
     </main>
     {% include "partials/footer.njk" %}
-    
-    {% include "partials/analytics.njk" %}
+
+    {% if not env.IS_DEV %}
+      {% include "partials/analytics.njk" %}
+    {% endif %}
   </body>
 </html>
