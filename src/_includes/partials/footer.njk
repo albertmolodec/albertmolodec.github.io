@@ -13,9 +13,11 @@
 
       <ul class="flex">
         {% for item in social.items %}
-          <a class="font-medium mr-4" href="{{ item.url }}" rel="external" target="_blank">
-            {{ item.text }}
-          </a>
+          <li class="font-medium mr-4">
+            <a href="{{ item.url }}" rel="noopener" target="_blank">
+              {{ item.text }}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </div>
