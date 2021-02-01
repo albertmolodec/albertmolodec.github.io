@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: false,
   purge: {
     enabled: process.env.ELEVENTY_ENV === 'production',
     content: [
@@ -8,22 +9,15 @@ module.exports = {
       './src/**/*.svg',
     ],
     options: {
-      whitelist: ['mode-dark'],
       whitelistPatternsChildren: [/prose$/],
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/custom-forms'),
-    require('tailwindcss-dark-mode')(),
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        inter: '"Inter var", sans-serif;',
-        interLegacy: '"Inter", sans-serif;',
-      },
-    },
+    extend: {},
   },
   variants: {
     margin: ['responsive', 'first', 'last'],

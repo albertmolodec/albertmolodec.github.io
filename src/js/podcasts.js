@@ -1,23 +1,23 @@
-import { run } from './lib/dom';
+import { run } from './lib/dom'
 
 run('#podcasts', target => {
-  const podcasts = [];
+  const podcasts = []
   fetch(`${process.env.API_DOMAIN}/podcasts`)
     .then(res => res.json())
     .then(data => {
-      target.innerHTML = '';
+      target.innerHTML = ''
       for (let record of data.records) {
-        const { Name } = record;
-        podcasts.push(Name);
+        const { Name } = record
+        podcasts.push(Name)
       }
       const timer = setInterval(() => {
         if (podcasts.length) {
-          const listItem = document.createElement('li');
-          listItem.textContent = podcasts.shift();
-          target.append(listItem);
+          const listItem = document.createElement('li')
+          listItem.textContent = podcasts.shift()
+          target.append(listItem)
         } else {
-          clearInterval(timer);
+          clearInterval(timer)
         }
-      }, 16);
-    });
-});
+      }, 16)
+    })
+})

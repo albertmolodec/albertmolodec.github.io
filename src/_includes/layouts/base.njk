@@ -6,8 +6,6 @@
     {% include "partials/meta.njk" %}
     <link rel="icon" href="/favicon.png" type="image/png"/>
 
-    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
-
     {% block head %}{% endblock %}
 
     {% if env.IS_DEV %}
@@ -26,7 +24,9 @@
       {% block content %}{% endblock content %}
     </main>
     {% include "partials/footer.njk" %}
-    
-    {% include "partials/analytics.njk" %}
+
+    {% if not env.IS_DEV %}
+      {% include "partials/analytics.njk" %}
+    {% endif %}
   </body>
 </html>
