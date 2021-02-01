@@ -14,7 +14,7 @@
     "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",
     "update": "run-p update:*",
     "build:html": "eleventy",
-    "build:js": "API_DOMAIN=${API_DOMAIN:=http://localhost:8888} node esbuild.js",
+    "build:js": "node esbuild.js",
     "build:css": "postcss src/css/{tailwind,app}.pcss --dir bundle/css --ext css",
     "watch:html": "eleventy --serve",
     "watch:js": "WATCH=true node esbuild.js",
