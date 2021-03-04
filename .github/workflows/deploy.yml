@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - source
-      - netlify-dev
   watch:
     types: [started]
 jobs:
