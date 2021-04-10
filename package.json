@@ -44,6 +44,7 @@
     "turbolinks": "5.2.0"
   },
   "devDependencies": {
+    "@vercel/node": "^1.9.1",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
