@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  mode: 'jit',
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
@@ -13,7 +14,6 @@ module.exports = {
       whitelistPatternsChildren: [/prose$/],
     },
   },
-  plugins: [require('@tailwindcss/custom-forms')],
   theme: {
     colors,
   },
