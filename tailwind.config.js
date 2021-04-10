@@ -10,9 +10,6 @@ module.exports = {
       './src/**/*.js',
       './src/**/*.svg',
     ],
-    options: {
-      whitelistPatternsChildren: [/prose$/],
-    },
   },
   theme: {
     colors,
