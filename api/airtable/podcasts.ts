@@ -1,13 +1,12 @@
-const Airtable = require('airtable')
+import { VercelRequest, VercelResponse } from '@vercel/node'
+import Airtable from 'airtable'
 
-const { podcasts } = require('./utils/airtable')
-const headers = require('./utils/headers')
+const airtableJson = require('fs').readFileSync(require('path').join(__dirname, '_files', 'airtable.json'), 'utf8')
+const { podcasts } = JSON.parse(airtableJson)
 
-const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
-  podcasts.id
-)
+const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(podcasts.id)
 
-exports.handler = async function () {
+export default async function (req: VercelRequest, res: VercelResponse) {
   const records = await new Promise((resolve, reject) => {
     const myPodcasts = []
     base('Podcasts')
@@ -33,10 +32,6 @@ exports.handler = async function () {
       )
   })
   const body = JSON.stringify({ records })
-  const response = {
-    statusCode: 200,
-    body,
-    headers,
-  }
-  return response
+  res.setHeader('content-type', 'application/json')
+  res.status(200).send(body)
 }

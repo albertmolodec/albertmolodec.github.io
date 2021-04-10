@@ -1,15 +1,16 @@
-const Airtable = require('airtable')
+import { VercelRequest, VercelResponse } from '@vercel/node'
+import Airtable from 'airtable'
 
-const { wishlist } = require('./utils/airtable')
-const headers = require('./utils/headers')
+const { readFileSync } = require('fs')
+const { join } = require('path')
+const airtableJson = readFileSync(join(__dirname, '_files', 'airtable.json'), 'utf8')
+const { wishlist } = JSON.parse(airtableJson)
 
-const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
-  wishlist.id
-)
+const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(wishlist.id)
 
-exports.handler = async function () {
+export default async function (req: VercelRequest, res: VercelResponse) {
   const records = await new Promise((resolve, reject) => {
-    const myWishes = []
+    const myWishes: any = []
     base(wishlist.table.giftIdeas)
       .select({
         maxRecords: 100,
@@ -32,14 +33,10 @@ exports.handler = async function () {
           } else {
             resolve(myWishes)
           }
-        }
+        },
       )
   })
   const body = JSON.stringify({ records })
-  const response = {
-    statusCode: 200,
-    body,
-    headers,
-  }
-  return response
+  res.setHeader('content-type', 'application/json')
+  res.status(200).send(body)
 }

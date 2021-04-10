@@ -14,37 +14,27 @@ Install dependencies.
 npm i
 ```
 
-Install [Netlify CLI](https://github.com/netlify/cli).
+Install [Vercel CLI](https://vercel.com/cli).
 
 ```bash
-npm install netlify-cli -g
+npm i -g vercel
 ```
 
-Login to a Netlify account.
+Login to Vercel and pull environment variables.
 
 ```bash
-netlify login
-```
-
-Link a local repo to an existing site on Netlify.
-
-```bash
-netlify link
+vercel env pull
 ```
 
 Start local dev server.
 
 ```bash
-npm run dev
+npm start
 ```
 
 ## Environment variables
 
-| Key                    |               Value               | Where to set |
-| ---------------------- | :-------------------------------: | :----------: |
-| **`API_DOMAIN`**       |    `https://api.albert.works`     |    Github    |
-| **`AIRTABLE_API_KEY`** |                ...                |   Netlify    |
+| Key                    |               Value               |           Where to set            |
+| ---------------------- | :-------------------------------: | :-------------------------------: |
+| **`AIRTABLE_API_KEY`** |                ...                |    Vercel (Prod, Preview, Dev)    |
 
-## Other
-
-Inspired by [XITY](https://github.com/equinusocio/xity-starter) and [Hylia](https://github.com/hankchizljaw/hylia).

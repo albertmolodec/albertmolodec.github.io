@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/airtable/**.ts": {
+      "includeFiles": "_files/airtable.json"
+    }
+  }
+}
