@@ -1,0 +1,12 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply font-semibold text-pink-600 hover:text-pink-800 transition-colors;
+  }
+}
