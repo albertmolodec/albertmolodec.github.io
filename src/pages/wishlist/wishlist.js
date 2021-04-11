@@ -1,7 +1,7 @@
 import { run, wrap } from './lib/dom'
 
 run('#wishlist', target => {
-  fetch(`${process.env.API_DOMAIN}/wishlist`)
+  fetch(`/api/wishlist`)
     .then(res => res.json())
     .then(({ records }) => {
       target.innerHTML = ''

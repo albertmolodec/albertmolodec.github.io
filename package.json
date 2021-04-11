@@ -7,19 +7,20 @@
   "scripts": {
     "start": "run-p start:wmr start:tailwind",
     "start:wmr": "wmr --public src",
-    "start:tailwind": "NODE_ENV=development postcss ./src/tailwind.css -o ./src/style.css -w",
+    "start:tailwind": "NODE_ENV=development postcss ./src/assets/tailwind.css -o ./src/style.css -w",
     "build": "run-s build:tailwind build:wmr",
     "build:wmr": "wmr build --public src --prerender",
-    "build:tailwind": "NODE_ENV=production postcss ./src/tailwind.css -o ./src/style.css",
+    "build:tailwind": "NODE_ENV=production postcss ./src/assets/tailwind.css -o ./src/style.css",
     "serve": "wmr serve --public src",
     "lint": "run-p lint:*",
     "format": "prettier --write 'src/**/*.(js|ts|jsx|tsx)'",
     "update": "run-p update:*",
     "update:deps": "npx npm-check-updates",
     "update:cssdb": "npx browserslist@latest --update-db",
-    "lint:js": "eslint src/**/*.js --ignore-pattern public",
+    "lint:js": "eslint src/**/*.{js,ts,jsx,tsx}",
     "lint:css": "stylelint src/**/*.{pcss,css}",
-    "generate-icons": "node scripts/generate-icons.js"
+    "generate-icons": "node scripts/generate-icons.js",
+    "clean": "rm -rf .cache .vercel/cache dist"
   },
   "dependencies": {
     "@splitbee/web": "^0.2.4",

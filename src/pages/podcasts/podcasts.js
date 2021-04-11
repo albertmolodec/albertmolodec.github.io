@@ -2,7 +2,7 @@ import { run } from './lib/dom'
 
 run('#podcasts', target => {
   const podcasts = []
-  fetch(`${process.env.API_DOMAIN}/podcasts`)
+  fetch(`/api/podcasts`)
     .then(res => res.json())
     .then(data => {
       target.innerHTML = ''

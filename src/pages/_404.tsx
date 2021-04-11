@@ -1,7 +1,9 @@
+import Layout from '../components/layout'
+
 const NotFound = () => (
-  <section>
+  <Layout>
     <h1>404: Not Found</h1>
-  </section>
+  </Layout>
 )
 
 export default NotFound
