@@ -29,7 +29,7 @@ vercel env pull
 Start local dev server.
 
 ```bash
-npm start
+vercel dev
 ```
 
 ## Environment variables
