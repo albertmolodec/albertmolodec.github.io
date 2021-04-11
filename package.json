@@ -18,8 +18,8 @@
     "update:deps": "npx npm-check-updates",
     "update:cssdb": "npx browserslist@latest --update-db",
     "lint:js": "eslint src/**/*.js --ignore-pattern public",
-    "lint:css": "stylelint src/**/*.{pcss,css}"
-
+    "lint:css": "stylelint src/**/*.{pcss,css}",
+    "generate-icons": "node scripts/generate-icons.js"
   },
   "dependencies": {
     "@splitbee/web": "^0.2.4",
@@ -34,6 +34,10 @@
     "wmr": "^1.5.1"
   },
   "devDependencies": {
+    "@svgr/core": "^5.5.0",
+    "@svgr/plugin-jsx": "^5.5.0",
+    "@svgr/plugin-prettier": "^5.5.0",
+    "@svgr/plugin-svgo": "^5.5.0",
     "@vercel/node": "^1.9.1",
     "eslint": "^7.24.0",
     "eslint-config-preact": "^1.1.3",
@@ -43,7 +47,8 @@
     "stylelint": "^13.12.0",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-order": "^4.1.0"
+    "stylelint-order": "^4.1.0",
+    "tiny-glob": "^0.2.8"
   },
   "eslintConfig": {
     "extends": [
