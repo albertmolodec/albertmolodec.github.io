@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="flex flex-col sm:flex-row">
-        <img src={avatar} className="w-48" alt="My low poly photo" />
+        <img src={avatar} className="w-48 h-48" alt="My low poly photo" />
         <div className="mt-8 sm:mt-0 sm:ml-8 flex flex-col justify-center">
           <p className="text-gray-900 leading-tight text-2xl md:text-3xl">
             Hello, I'm
