@@ -6,7 +6,7 @@
   "homepage": "https://github.com/albertmolodec/albertmolodec.github.io",
   "scripts": {
     "start": "wmr --public src",
-    "build": "wmr build --public src",
+    "build": "wmr build --public src --prerender",
     "serve": "wmr serve --public src",
     "lint": "run-p lint:*",
     "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",
