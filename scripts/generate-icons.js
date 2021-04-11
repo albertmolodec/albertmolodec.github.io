@@ -35,7 +35,6 @@ function getFileName(iconPath) {
       svg,
       {
         template: iconComponentTemplate,
-        icon: true,
         // 1. Clean SVG files using SVGO
         // 2. Generate JSX
         // 3. Format the result using Prettier
@@ -44,10 +43,9 @@ function getFileName(iconPath) {
           '@svgr/plugin-jsx',
           '@svgr/plugin-prettier',
         ],
-        // Replace hardcoded colors with `currentColor`
+        icon: true,
         svgoConfig: {
           plugins: [
-            { convertColors: { currentColor: true } },
             { removeXMLNS: true },
           ],
         },
@@ -56,7 +54,7 @@ function getFileName(iconPath) {
       { componentName },
     )
     await fs.writeFile(
-      `${COMPONENTS_DIR}/${path.parse(fileName).name}.tsx`,
+      `${COMPONENTS_DIR}/${fileName}.tsx`,
       componentCode,
     )
   }
