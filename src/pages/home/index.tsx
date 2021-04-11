@@ -28,6 +28,8 @@ export default function Home() {
           <a
             className="text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
             href={Social.url}
+            target="_blank"
+            rel="noreferrer"
           >
             <div className="sr-only">{Social.text}</div>
             <Social.icon className="h-6 w-6 inline" />
