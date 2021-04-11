@@ -8,7 +8,7 @@
     "start": "run-p start:wmr start:tailwind",
     "start:wmr": "wmr --public src",
     "start:tailwind": "NODE_ENV=development postcss ./src/tailwind.css -o ./src/style.css -w",
-    "build": "run-s build:wmr build:tailwind",
+    "build": "run-s build:tailwind build:wmr",
     "build:wmr": "wmr build --public src --prerender",
     "build:tailwind": "NODE_ENV=production postcss ./src/tailwind.css -o ./src/style.css",
     "serve": "wmr serve --public src",
