@@ -1,7 +1,7 @@
 src/style.css
-.DS_Store
-
+# Start sharec-config ignore
 /node_modules
+.DS_Store
 .env
 .cache
 .vercel
@@ -10,8 +10,4 @@ src/style.css
 /build
 /tmp
 /temp
-# Ignore copied shared configs
-.eslintrc.js
-.editorconfig
-.prettierrc
-.stylelintrc
+# End sharec-config ignore
