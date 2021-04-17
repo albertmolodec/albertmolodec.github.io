@@ -11,7 +11,7 @@
     "build": "run-s build:tailwind build:wmr",
     "build:wmr": "wmr build --public src --prerender",
     "build:tailwind": "NODE_ENV=production postcss ./src/assets/tailwind.css -o ./src/style.css",
-    "serve": "wmr serve --public src",
+    "serve": "wmr serve --public dist",
     "lint": "run-p lint:*",
     "format": "prettier --write 'src/**/*.(js|ts|jsx|tsx)'",
     "update": "run-p update:*",
