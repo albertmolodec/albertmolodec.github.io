@@ -1,6 +1,6 @@
 src/style.css
 # Start sharec-config ignore
-/node_modules
+**/node_modules
 .DS_Store
 .env
 .cache
