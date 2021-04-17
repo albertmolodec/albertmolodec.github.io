@@ -1,9 +1,9 @@
 {
-  "name": "albertmolodec.github.io",
-  "version": "2.0.0",
+  "name": "albert.works-website",
+  "version": "2.1.0",
   "description": "My personal site",
-  "author": "Albert Abdulmanov <albert.abdu@gmail.com>",
-  "homepage": "https://github.com/albertmolodec/albertmolodec.github.io",
+  "author": "Albert Abdulmanov <hello@albert.works>",
+  "homepage": "https://github.com/albertmolodec/albert.works",
   "scripts": {
     "start": "run-p start:wmr start:tailwind",
     "start:wmr": "wmr --public src",
