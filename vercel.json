@@ -1,7 +1,7 @@
 {
   "functions": {
-    "api/**.js": {
-      "includeFiles": "_files/airtable.json"
+    "api/**.ts": {
+      "runtime": "vercel-deno@0.7.9"
     }
   }
 }
