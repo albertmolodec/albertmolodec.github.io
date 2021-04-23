@@ -14,15 +14,21 @@ if (process.env.NODE_ENV !== 'development') {
 
 export function App() {
   return (
-    <LocationProvider>
-      <ErrorBoundary>
-        <Router>
-          <Home path="/" />
-          <Wishlist path="/wishlist" />
-          <NotFound default />
-        </Router>
-      </ErrorBoundary>
-    </LocationProvider>
+    <>
+      {/* Fake link to enable prerendering */}
+      <a href="/404" className="hidden">
+        404
+      </a>
+      <LocationProvider>
+        <ErrorBoundary>
+          <Router>
+            <Home path="/" />
+            <Wishlist path="/wishlist" />
+            <NotFound default />
+          </Router>
+        </ErrorBoundary>
+      </LocationProvider>
+    </>
   )
 }
 
