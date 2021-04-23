@@ -19,6 +19,9 @@ export function App() {
       <a href="/404" className="hidden">
         404
       </a>
+      <a href="/wishlist" className="hidden">
+        wishlist
+      </a>
       <LocationProvider>
         <ErrorBoundary>
           <Router>
