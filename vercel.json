@@ -3,9 +3,5 @@
     "api/**.ts": {
       "runtime": "vercel-deno@0.7.9"
     }
-  },
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/index.html" }
-  ]
+  }
 }
