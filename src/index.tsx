@@ -5,6 +5,7 @@ import lazy, { ErrorBoundary } from 'preact-iso/lazy'
 import Home from './pages/home'
 import NotFound from './pages/_404'
 import { initAnalytics } from './lib/analytics'
+import Header from './components/header'
 
 const Wishlist = lazy(() => import('./pages/wishlist'))
 
@@ -15,13 +16,7 @@ if (process.env.NODE_ENV !== 'development') {
 export function App() {
   return (
     <>
-      {/* Fake link to enable prerendering */}
-      <a href="/404" className="hidden">
-        404
-      </a>
-      <a href="/wishlist" className="hidden">
-        wishlist
-      </a>
+      <Header />
       <LocationProvider>
         <ErrorBoundary>
           <Router>
