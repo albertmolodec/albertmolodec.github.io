@@ -46,6 +46,6 @@ export const socials: Social[] = [
   {
     text: 'LinkedIn',
     icon: SvgLinkedin,
-    url: 'https://www.linkedin.com/in/albert-abdulmanov-5b94a316b',
+    url: 'https://www.linkedin.com/in/albert-abdulmanov',
   },
 ]
