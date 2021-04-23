@@ -1,11 +1,9 @@
-import { ComponentChildren } from 'preact'
+import { FunctionComponent } from 'preact'
 
-interface Props {
-  children: ComponentChildren
-  className?: string
-}
-
-const Layout = ({ children, className = '' }: Props) => {
+const Layout: FunctionComponent<{ className?: string }> = ({
+  children,
+  className = '',
+}) => {
   const layoutClass =
     'mx-auto max-w-screen-md px-4 sm:px-6 md:px-8 my-12 sm:my-20 md:my-32' +
     className
