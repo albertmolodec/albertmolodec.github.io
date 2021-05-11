@@ -1,9 +1,9 @@
 {
-  "name": "albert.works-website",
+  "name": "www",
   "version": "2.1.0",
   "description": "My personal site",
-  "author": "Albert Abdulmanov <hello@albert.works>",
-  "homepage": "https://github.com/albertmolodec/albert.works",
+  "author": "Albert Abdulmanov <hello@lbrt.me>",
+  "homepage": "https://github.com/albertmolodec/www",
   "scripts": {
     "start": "run-p start:wmr start:tailwind",
     "start:wmr": "wmr --public src",
@@ -48,7 +48,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/albertmolodec/albert.works.git"
+    "url": "git+https://github.com/albertmolodec/www.git"
   },
   "sharec": {
     "config": "@albertmolodec/sharec-config",
