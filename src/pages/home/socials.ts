@@ -16,7 +16,7 @@ export const socials: Social[] = [
   {
     text: 'Email',
     icon: SvgEmail,
-    url: 'mailto:hello@albert.works',
+    url: 'mailto:hello@lbrt.me',
   },
   {
     text: 'Twitter',
